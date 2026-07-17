@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forge · Investor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Orbitron:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0E17; --card:#121826; --card-border:rgba(255,255,255,0.08);
+    --ink:#B9C0D0; --headline:#F4F6FA;
+    --blue:#4C8DFF; --red:#E23744;
+    --line:rgba(255,255,255,0.08);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    overflow:hidden;}
+  .kicker{font-family:'JetBrains Mono',ui-monospace,monospace;color:var(--blue);
+    letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;font-weight:600;}
+  h1,h2{font-family:'Space Grotesk',-apple-system,sans-serif;color:var(--headline);
+    font-weight:700;line-height:1.08;margin:0;letter-spacing:-.01em;}
+  .deck{position:relative;height:100vh;width:100vw;background:
+    radial-gradient(1200px 600px at 85% -10%, rgba(76,141,255,0.10), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(226,55,68,0.06), transparent 60%),
+    var(--bg);}
+  .track{display:flex;height:100%;width:100%;transition:transform .55s cubic-bezier(.65,0,.24,1);}
+  .slide{flex:0 0 100vw;height:100%;display:flex;flex-direction:column;
+    justify-content:flex-start;align-items:flex-start;
+    padding:150px 9vw 6vh;position:relative;opacity:.25;overflow:hidden;
+    transition:opacity .5s ease;}
+  .slide.active{opacity:1;}
+  .slide-inner{max-width:1080px;width:100%;margin:auto 0;}
+  .rule{width:52px;height:3px;background:var(--blue);margin:18px 0 26px;border-radius:2px;}
+  .headline{font-size:clamp(28px,4.2vw,52px);}
+  .sub{font-size:clamp(14px,1.4vw,18px);color:#8891A6;margin-top:16px;max-width:640px;
+    line-height:1.6;font-weight:400;}
+  .grid{display:grid;gap:14px;margin-top:28px;}
+  .grid.cols2{grid-template-columns:1fr 1fr;}
+  .grid.cols3{grid-template-columns:repeat(3,1fr);}
+  .grid.cols4{grid-template-columns:repeat(4,1fr);}
+  .card{background:var(--card);border:1px solid var(--card-border);border-top:2px solid rgba(76,141,255,.4);
+    border-radius:10px;padding:18px 20px;
+    box-shadow:0 1px 2px rgba(0,0,0,.2), 0 14px 28px -20px rgba(0,0,0,.6);}
+  .card.live-card{border-top:2px solid rgba(226,55,68,.5);}
+  .card .label{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--blue);
+    letter-spacing:.08em;text-transform:uppercase;font-weight:600;margin-bottom:7px;}
+  .card .label.live{color:var(--red);}
+  .card .title{font-family:'Space Grotesk',sans-serif;font-size:17px;color:var(--headline);font-weight:600;
+    margin-bottom:5px;}
+  .card .body{font-size:13px;color:#8891A6;line-height:1.5;}
+  .stat{display:flex;flex-direction:column;}
+  .stat .num{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,3.2vw,42px);color:var(--headline);
+    font-weight:700;}
+  .stat .num.accent{color:var(--red);}
+  .stat .num.gold{color:var(--blue);}
+  .stat .lbl{font-family:'JetBrains Mono',monospace;font-size:11px;color:#6C7488;
+    letter-spacing:.06em;text-transform:uppercase;margin-top:6px;}
+  .tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:11px;
+    letter-spacing:.06em;text-transform:uppercase;color:#C7CCD9;background:rgba(255,255,255,.05);
+    border:1px solid var(--card-border);border-radius:20px;padding:5px 12px;margin:3px 6px 3px 0;font-weight:500;}
+  .tag.live{color:var(--red);background:rgba(226,55,68,.08);border-color:rgba(226,55,68,.3);}
+  .tag.gold{color:var(--blue);background:rgba(76,141,255,.1);border-color:rgba(76,141,255,.3);}
+  .footer-brand{position:absolute;bottom:28px;left:9vw;font-family:'JetBrains Mono',monospace;
+    font-size:11px;color:#5A6072;letter-spacing:.08em;}
+  .cta{margin-top:32px;}
+  .cta a{font-family:'JetBrains Mono',monospace;font-size:13.5px;color:#06111f;background:var(--blue);
+    padding:13px 26px;border-radius:8px;text-decoration:none;letter-spacing:.03em;font-weight:600;
+    display:inline-block;box-shadow:0 8px 24px -8px rgba(76,141,255,.5);}
+  .quote{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(20px,2.6vw,30px);
+    color:var(--headline);line-height:1.35;max-width:820px;}
+  .quote-attr{margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:12px;
+    color:var(--blue);letter-spacing:.06em;text-transform:uppercase;}
+  .titleslide{justify-content:center;}
+  .titleslide .slide-inner{margin:0;}
+  .titleslide .wordmark{display:flex;align-items:center;gap:10px;margin-bottom:26px;}
+  .titleslide .wordmark .logotext{font-family:'JetBrains Mono',monospace;font-size:13px;color:#C7CCD9;
+    letter-spacing:.18em;text-transform:uppercase;font-weight:600;}
+  .titleslide h1{font-size:clamp(34px,5.6vw,72px);}
+  .titleslide .sub{font-size:clamp(15px,1.6vw,19px);max-width:700px;}
+  .meta-row{display:flex;gap:28px;margin-top:36px;flex-wrap:wrap;}
+  .meta-row .m{font-family:'JetBrains Mono',monospace;font-size:11px;color:#6C7488;
+    letter-spacing:.05em;text-transform:uppercase;}
+  .meta-row .m b{color:var(--red);}
+  /* full-width header bar, persistent on every slide */
+  .headerbar{position:fixed;top:0;left:0;right:0;height:80px;z-index:20;
+    display:flex;align-items:center;justify-content:space-between;padding:0 9vw;
+    background:rgba(10,14,23,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--card-border);}
+  .headerbar .brand{display:flex;align-items:center;gap:13px;}
+  .headerbar .brand svg{width:42px;height:42px;flex:none;}
+  .headerbar .brand .word{font-family:'Orbitron',sans-serif;font-size:16px;color:var(--headline);
+    font-weight:700;letter-spacing:.02em;text-transform:uppercase;}
+  .headerbar .brand .sep{color:#3A4152;font-size:16px;font-weight:300;}
+  .headerbar .brand .ctx{font-family:'Orbitron',sans-serif;font-size:12px;color:var(--blue);
+    letter-spacing:.08em;text-transform:uppercase;font-weight:600;}
+  .headerbar .counter{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#8891A6;
+    letter-spacing:.06em;}
+  /* nav chrome */
+  .navdots{position:fixed;bottom:28px;right:9vw;display:flex;gap:9px;z-index:20;}
+  .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.14);cursor:pointer;
+    transition:background .25s,transform .25s;}
+  .dot.on{background:var(--blue);transform:scale(1.3);}
+  .navzone{position:fixed;top:80px;bottom:0;width:9vw;z-index:10;cursor:pointer;}
+  .navzone.left{left:0;} .navzone.right{right:0;}
+  .navzone:hover{background:linear-gradient(90deg, rgba(76,141,255,.06), transparent);}
+  .navzone.right:hover{background:linear-gradient(270deg, rgba(76,141,255,.06), transparent);}
+  .progress{position:fixed;top:0;left:0;height:3px;background:var(--blue);z-index:30;
+    transition:width .55s cubic-bezier(.65,0,.24,1);box-shadow:0 0 12px rgba(76,141,255,.6);}
+  @media (max-width:760px){
+    .grid.cols3,.grid.cols4{grid-template-columns:1fr 1fr;}
+    .navzone{width:12vw;}
+  }
+</style>
+</head>
+<body>
+<div class="headerbar">
+  <div class="brand">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="var(--red)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M50,6 L33,6 L17,22 L17,40 L33,54 L50,54"/>
+        <path d="M50,6 L67,6 L83,22 L83,40 L67,54 L50,54"/>
+        <path d="M50,6 L50,54"/>
+        <path d="M46,54 L46,76 L50,87"/>
+        <path d="M54,54 L54,76 L50,87"/>
+        <path d="M44,50 L34,42 L34,29 L25,20"/>
+        <path d="M56,50 L66,42 L66,29 L75,20"/>
+      </g>
+      <g fill="var(--bg)" stroke="var(--red)" stroke-width="3.6">
+        <circle cx="34" cy="42" r="4.2"/>
+        <circle cx="34" cy="29" r="4.2"/>
+        <circle cx="25" cy="20" r="4.2"/>
+        <circle cx="66" cy="42" r="4.2"/>
+        <circle cx="66" cy="29" r="4.2"/>
+        <circle cx="75" cy="20" r="4.2"/>
+      </g>
+    </svg>
+    <span class="word">YYZDATA</span>
+    <span class="sep">/</span>
+    <span class="ctx">YYZDATA · FORGE</span>
+  </div>
+  <div class="counter"><span id="cnum">1</span> / 8</div>
+</div>
+<div class="progress" id="progress" style="width:0%"></div>
+<div class="deck">
+  <div class="track" id="track">
+<section class="slide titleslide"><div class="slide-inner">
+          <div class="wordmark"><span class="logotext">YYZDATA · FORGE</span></div>
+          <h1>Signals senses. Forge builds.</h1>
+          <div class="sub">Forge is YYZdata's applied-intelligence services arm: a revenue-generating practice that bootstraps the company and funds the Signals build.</div>
+          <div class="meta-row"><div class="m">Non-dilutive</div><div class="m">Delivery proof</div><div class="m">ISO 27001 / ISO 9001</div></div>
+        </div></section>
+<section class="slide"><div class="slide-inner">
+          <div class="kicker">WHY FORGE EXISTS</div>
+          <h2 class="headline">Capital efficiency, not a distraction.</h2>
+          <div class="sub">Every dollar Forge bills is a dollar of runway that doesn't come from dilution. Every project Forge delivers is proof the team can ship. It's the same engineers building Signals internally, credited at transfer price: one build muscle, two outputs.</div>
+          
+        </div></section>
+<section class="slide"><div class="slide-inner">
+          <div class="kicker">FOUR LINES, ONE STUDIO</div>
+          <h2 class="headline">Structured to compound.</h2>
+          <div class="sub">Every custom build tries to become a product: patterns push down into Express templates or up into Products.</div>
+          <div class="grid cols4"><div class="card "><div class="label ">STUDIO</div><div class="title">Custom builds</div><div class="body">Client-owned enterprise and mid-market work, project plus retainer.</div></div><div class="card "><div class="label ">PRODUCTS</div><div class="title">YYZ-owned apps</div><div class="body">Licensed products: AI concierge, platform, vertical packs. The compounding line.</div></div><div class="card "><div class="label ">EXPRESS</div><div class="title">SMB, templated</div><div class="body">Fixed-price packages: storefront, ops automation, presence.</div></div><div class="card live-card"><div class="label live">SIGNALS DELIVERY</div><div class="title">Internal</div><div class="body">Forge engineers build Signals, credited via internal transfer price.</div></div></div>
+        </div></section>
+<section class="slide"><div class="slide-inner">
+          <div class="kicker">HOW ENGAGEMENTS RUN</div>
+          <h2 class="headline">Assess. Build. Run.</h2>
+          <div class="sub">A fixed-price assessment de-risks the relationship before any build commitment. Build is phased and fixed, with architecture signed off before code and acceptance gated per phase. Run is a monthly retainer once it's live.</div>
+          
+        </div></section>
+<section class="slide"><div class="slide-inner">
+          <div class="kicker">CREDIBILITY</div>
+          <h2 class="headline">Not a first-time team.</h2>
+          <div class="sub"></div>
+          <div class="grid cols2"><div class="card "><div class="label ">CERTIFIED</div><div class="title">ISO 27001 + ISO 9001</div><div class="body">Information security and quality management, certified.</div></div><div class="card "><div class="label ">PEDIGREE</div><div class="title">Built at Abbott</div><div class="body">Leadership shipped data systems in finance and life sciences before founding YYZdata.</div></div></div>
+        </div></section>
+<section class="slide"><div class="slide-inner">
+          <div class="kicker">PROOF, NAMES WITHHELD</div>
+          <h2 class="headline">Delivered, not theoretical.</h2>
+          <div class="sub"></div>
+          <div class="grid cols2"><div class="card "><div class="label ">SEMICONDUCTOR</div><div class="title">Synthetic data at scale</div><div class="body">Training data pipeline for a global semiconductor company.</div></div><div class="card "><div class="label ">AEC / CONSTRUCTION</div><div class="title">Spreadsheet estate → governed platform</div><div class="body">Multi-tenant platform replacing spreadsheet chaos for an owner-side capital-projects consultancy.</div></div><div class="card "><div class="label ">RETAIL</div><div class="title">Packaged AI concierge</div><div class="body">Business-first AI concierge shipped for a specialty retailer.</div></div><div class="card "><div class="label ">AUTO FINANCE</div><div class="title">Trusted data for lending</div><div class="body">Governed data foundation for a regulated auto-finance lender.</div></div></div>
+        </div></section>
+<section class="slide"><div class="slide-inner">
+          <div class="kicker">WHERE WE'RE WARM</div>
+          <h2 class="headline">Construction, hospitality, auto, health.</h2>
+          <div class="sub">Construction and AEC (including a BIM Stream channel), hospitality and venues, auto dealers, and healthcare and dental are the verticals with the warmest relationships and the clearest near-term pipeline.</div>
+          
+        </div></section>
+<section class="slide"><div class="slide-inner">
+          <div class="kicker">THE TAKEAWAY</div>
+          <h2 class="headline">Forge de-risks the Signals raise.</h2>
+          <div class="sub">A working services business, real clients, real revenue, run by a team that's already shipped. That's the balance sheet behind the pitch.</div>
+          <div class="cta"><a href="mailto:info@yyzdata.com">Talk to us</a></div>
+        </div><div class="footer-brand">YYZdata Inc. · Confidential, not for distribution</div></section>
+  </div>
+  <div class="navzone left" onclick="go(-1)"></div>
+  <div class="navzone right" onclick="go(1)"></div>
+</div>
+<div class="navdots" id="dots"></div>
+<div id="gate" style="position:fixed;inset:0;background:#0A0E17;z-index:100;display:flex;
+  align-items:center;justify-content:center;flex-direction:column;">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#4C8DFF;letter-spacing:.14em;
+    text-transform:uppercase;margin-bottom:14px;">YYZDATA · ACCESS CODE</div>
+  <input id="gateInput" type="password" placeholder="enter code" autocomplete="off" style="
+    font-family:'JetBrains Mono',monospace;font-size:15px;background:#121826;border:1px solid rgba(255,255,255,.12);
+    color:#F4F6FA;padding:12px 16px;border-radius:8px;width:240px;text-align:center;outline:none;"/>
+  <div id="gateErr" style="color:#E23744;font-family:'JetBrains Mono',monospace;font-size:11px;margin-top:10px;height:14px;"></div>
+</div>
+<script>
+  const GATE_CODE = "signals2026";
+  const gate = document.getElementById('gate');
+  const gateInput = document.getElementById('gateInput');
+  const gateErr = document.getElementById('gateErr');
+  if (localStorage.getItem('yyz_unlocked') === '1') { gate.style.display = 'none'; }
+  function tryUnlock(){
+    if (gateInput.value === GATE_CODE) {
+      localStorage.setItem('yyz_unlocked', '1');
+      gate.style.display = 'none';
+    } else {
+      gateErr.textContent = 'incorrect code';
+      gateInput.value = '';
+    }
+  }
+  gateInput.addEventListener('keydown', e => { if (e.key === 'Enter') tryUnlock(); });
+  setTimeout(() => gateInput.focus(), 100);
+  const total = 8;
+  let idx = 0;
+  const track = document.getElementById('track');
+  const dotsWrap = document.getElementById('dots');
+  const cnum = document.getElementById('cnum');
+  const progress = document.getElementById('progress');
+  for(let i=0;i<total;i++){
+    const d = document.createElement('div');
+    d.className = 'dot' + (i===0?' on':'');
+    d.onclick = ()=>render(i);
+    dotsWrap.appendChild(d);
+  }
+  const slides = document.querySelectorAll('.slide');
+  function render(n){
+    idx = Math.max(0, Math.min(total-1, n));
+    track.style.transform = `translateX(-${idx*100}vw)`;
+    slides.forEach((s,i)=>s.classList.toggle('active', i===idx));
+    document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on', i===idx));
+    cnum.textContent = idx+1;
+    progress.style.width = ((idx+1)/total*100)+'%';
+  }
+  function go(dir){ render(idx+dir); }
+  document.addEventListener('keydown', e=>{
+    if(['ArrowRight','PageDown',' '].includes(e.key)) go(1);
+    if(['ArrowLeft','PageUp'].includes(e.key)) go(-1);
+  });
+  let touchX=null;
+  document.addEventListener('touchstart', e=>touchX=e.touches[0].clientX);
+  document.addEventListener('touchend', e=>{
+    if(touchX===null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    if(Math.abs(dx)>50) go(dx<0?1:-1);
+    touchX=null;
+  });
+  render(0);
+</script>
+</body>
+</html>
