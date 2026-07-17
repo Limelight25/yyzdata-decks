@@ -18,8 +18,7 @@
     min-height:100vh;display:flex;align-items:center;justify-content:center;padding:6vh 6vw;}
   .wrap{max-width:820px;width:100%;}
   .brand{display:flex;align-items:center;gap:13px;margin-bottom:26px;}
-  .brand svg{width:34px;height:34px;}
-  .brand .word{font-family:'Orbitron',sans-serif;font-size:16px;color:#F4F6FA;font-weight:700;letter-spacing:.02em;text-transform:uppercase;}
+  .brand img.logo{height:28px;width:auto;display:block;}
   .kicker{font-family:'JetBrains Mono',monospace;color:var(--blue);letter-spacing:.14em;
     text-transform:uppercase;font-size:12px;font-weight:600;}
   h1{font-family:'Space Grotesk',sans-serif;color:#F4F6FA;font-size:clamp(28px,4.5vw,44px);
@@ -40,27 +39,7 @@
 <body>
 <div class="wrap">
   <div class="brand">
-    <svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg">
-      <g fill="none" stroke="#E23744" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M50,16 L40,8 L24,8 L12,20 L12,42 L24,54 L44,54 L48,60"/>
-        <path d="M50,16 L60,8 L76,8 L88,20 L88,42 L76,54 L56,54 L52,60"/>
-        <path d="M50,16 L50,60"/>
-        <path d="M48,60 L49,82 L46,96"/>
-        <path d="M52,60 L51,82 L54,96"/>
-        <path d="M46,96 L50,90 L54,96"/>
-        <path d="M32,8 L32,18 L20,30 L20,44 L24,54"/>
-        <path d="M68,8 L68,18 L80,30 L80,44 L76,54"/>
-      </g>
-      <g fill="#0A0E17" stroke="#E23744" stroke-width="3.6">
-        <circle cx="32" cy="18" r="4.2"/>
-        <circle cx="20" cy="30" r="4.2"/>
-        <circle cx="20" cy="44" r="4.2"/>
-        <circle cx="68" cy="18" r="4.2"/>
-        <circle cx="80" cy="30" r="4.2"/>
-        <circle cx="80" cy="44" r="4.2"/>
-      </g>
-    </svg>
-    <span class="word">YYZDATA</span>
+    <img src="yyzdata-logo.png" alt="YYZDATA" class="logo"/>
   </div>
   <div class="kicker">DECKS</div>
   <h1>Pick a deck</h1>
