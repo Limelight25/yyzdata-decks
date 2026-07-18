@@ -67,32 +67,5 @@
     </a>
   </div>
 </div>
-<div id="gate" style="position:fixed;inset:0;background:#0A0E17;z-index:100;display:flex;
-  align-items:center;justify-content:center;flex-direction:column;">
-  <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#4C8DFF;letter-spacing:.14em;
-    text-transform:uppercase;margin-bottom:14px;">YYZDATA · ACCESS CODE</div>
-  <input id="gateInput" type="password" placeholder="enter code" autocomplete="off" style="
-    font-family:'JetBrains Mono',monospace;font-size:15px;background:#121826;border:1px solid rgba(255,255,255,.12);
-    color:#F4F6FA;padding:12px 16px;border-radius:8px;width:240px;text-align:center;outline:none;"/>
-  <div id="gateErr" style="color:#E23744;font-family:'JetBrains Mono',monospace;font-size:11px;margin-top:10px;height:14px;"></div>
-</div>
-<script>
-  const GATE_CODE = "2112";
-  const gate = document.getElementById('gate');
-  const gateInput = document.getElementById('gateInput');
-  const gateErr = document.getElementById('gateErr');
-  if (localStorage.getItem('yyz_unlocked') === '1') { gate.style.display = 'none'; }
-  function tryUnlock(){
-    if (gateInput.value === GATE_CODE) {
-      localStorage.setItem('yyz_unlocked', '1');
-      gate.style.display = 'none';
-    } else {
-      gateErr.textContent = 'incorrect code';
-      gateInput.value = '';
-    }
-  }
-  gateInput.addEventListener('keydown', e => { if (e.key === 'Enter') tryUnlock(); });
-  setTimeout(() => gateInput.focus(), 100);
-</script>
 </body>
 </html>
