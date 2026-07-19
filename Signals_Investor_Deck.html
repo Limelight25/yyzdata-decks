@@ -108,8 +108,25 @@
   .progress{position:fixed;top:0;left:0;height:3px;background:var(--blue);z-index:30;
     transition:width .55s cubic-bezier(.65,0,.24,1);box-shadow:0 0 12px rgba(76,141,255,.6);}
   @media (max-width:760px){
-    .grid.cols3,.grid.cols4{grid-template-columns:1fr 1fr;}
-    .navzone{width:12vw;}
+    .headerbar{height:60px;padding:0 6vw;}
+    .navzone{top:60px;width:0;}
+    .slide{padding:80px 6vw 78px;overflow-y:auto;-webkit-overflow-scrolling:touch;justify-content:flex-start;}
+    .slide-inner{margin:0;max-width:100%;}
+    .titleslide{justify-content:flex-start;}
+    .titleslide .slide-inner{margin:0;}
+    .headline{font-size:clamp(24px,6.6vw,32px);}
+    .titleslide h1{font-size:clamp(28px,8vw,40px);}
+    .sub,.titleslide .sub{font-size:14.5px;margin-top:12px;max-width:100%;}
+    .grid{gap:10px;margin-top:18px;}
+    .grid.cols2,.grid.cols3,.grid.cols4{grid-template-columns:1fr;}
+    .card{padding:14px 15px;}
+    .card .title{font-size:15.5px;}
+    .card .body{font-size:12.5px;}
+    .stat .num{font-size:clamp(24px,8vw,32px);}
+    .meta-row{gap:16px;margin-top:22px;}
+    .navdots{bottom:14px;right:6vw;}
+    .footer-brand{left:6vw;bottom:12px;font-size:10px;}
+    .cta{margin-top:22px;}
   }
 </style>
 </head>
@@ -135,7 +152,7 @@
           <div class="kicker">THE PROBLEM</div>
           <h2 class="headline">Venues run on cameras that only record.</h2>
           <div class="sub">Ballparks, campuses, retail, and commercial real estate all have surveillance video today. Almost none of it is used for anything beyond after-the-fact review. The operational signal, where a line is backing up, where a crowd is forming, how a guest actually experiences the venue, sits on disk, unused.</div>
-          
+
         </div></section>
 <section class="slide"><div class="slide-inner">
           <div class="kicker">THE PRODUCT</div>
@@ -145,15 +162,15 @@
         </div></section>
 <section class="slide"><div class="slide-inner">
           <div class="kicker">PROOF, NOT SLIDES</div>
-          <h2 class="headline">Seven live demos, one platform.</h2>
-          <div class="sub">Interactive builds already running across every target vertical, same core reasoning stack, configured per site.</div>
-          <div class="grid cols3"><div class="card live-card"><div class="label live">LIVE</div><div class="title">Ballpark / Stadium</div><div class="body">Concourse queueing and security awareness at stadium scale.</div></div><div class="card live-card"><div class="label live">LIVE · LIGHTHOUSE</div><div class="title">Fenway Park</div><div class="body">A live conversation in flight; the demo-in-the-box drives the design-partner pitch.</div></div><div class="card live-card"><div class="label live">LIVE · BEACHHEAD</div><div class="title">Restaurant & Lounge</div><div class="body">First paid-pilot target: warm relationship, fast, countable ROI.</div></div><div class="card live-card"><div class="label live">LIVE</div><div class="title">Auto Dealership</div><div class="body">Fixed-ops and lot-floor signal against a $9.2M-per-rooftop line item.</div></div><div class="card live-card"><div class="label live">LIVE</div><div class="title">Commercial Real Estate</div><div class="body">Tenant experience and space utilization.</div></div><div class="card live-card"><div class="label live">LIVE</div><div class="title">Retail</div><div class="body">Shopper flow and floor coverage.</div></div><div class="card live-card"><div class="label live">LIVE</div><div class="title">Campus</div><div class="body">Crowd flow and safety across a multi-building footprint.</div></div></div>
+          <h2 class="headline">Seven interactive demos, one platform.</h2>
+          <div class="sub">Interactive demos already running across every target vertical, same core reasoning stack, configured per site.</div>
+          <div class="grid cols3"><div class="card live-card"><div class="label live">DEMO</div><div class="title">Ballpark / Stadium</div><div class="body">Concourse queueing and security awareness at stadium scale.</div></div><div class="card live-card"><div class="label live">LIVE · LIGHTHOUSE</div><div class="title">Fenway Park</div><div class="body">A live conversation in flight; the demo-in-the-box drives the design-partner pitch.</div></div><div class="card live-card"><div class="label live">LIVE · BEACHHEAD</div><div class="title">Restaurant & Lounge</div><div class="body">First paid-pilot target: warm relationship, fast, countable ROI.</div></div><div class="card live-card"><div class="label live">DEMO</div><div class="title">Auto Dealership</div><div class="body">Fixed-ops and lot-floor signal against a $9.2M-per-rooftop line item.</div></div><div class="card live-card"><div class="label live">DEMO</div><div class="title">Commercial Real Estate</div><div class="body">Tenant experience and space utilization.</div></div><div class="card live-card"><div class="label live">DEMO</div><div class="title">Retail</div><div class="body">Shopper flow and floor coverage.</div></div><div class="card live-card"><div class="label live">DEMO</div><div class="title">Campus</div><div class="body">Crowd flow and safety across a multi-building footprint.</div></div></div>
         </div></section>
 <section class="slide"><div class="slide-inner">
           <div class="kicker">GO-TO-MARKET</div>
           <h2 class="headline">Land small, prove fast, expand.</h2>
           <div class="sub">Beachhead: a restaurant and lounge Ranj knows personally, warm relationship, undefended vertical, ROI provable in weeks. Lighthouse: Fenway Park, a live conversation and a demo-in-the-box built for a design-partner meeting and LOI, not the first paid deal.</div>
-          
+
         </div></section>
 <section class="slide"><div class="slide-inner">
           <div class="kicker">MARKET</div>
@@ -164,19 +181,19 @@
 <section class="slide"><div class="slide-inner">
           <div class="kicker">WHY THIS COMPOUNDS</div>
           <h2 class="headline">The demo is the door. The data is the moat.</h2>
-          <div class="sub">Any single component can be cloned in a couple of weeks. What can't be cloned is the flywheel: every deployment generates labeled, real-world footage that improves the next one. Add operational know-how, distribution and trust, a defensible compliance posture, and an on-device, privacy-first architecture (no biometrics, no raw video leaving the box), and the lead compounds with every site.</div>
-          
+          <div class="sub">Any single component can be cloned in a couple of weeks. What can't be cloned is the flywheel: every live site generates labeled, real-world footage that improves the next one. Add operational know-how, distribution and trust, a defensible compliance posture, and an on-device, privacy-first architecture (no biometrics, no raw video leaving the box), and the lead compounds with every site.</div>
+
         </div></section>
 <section class="slide"><div class="slide-inner">
           <div class="kicker">CAPITAL EFFICIENCY</div>
           <h2 class="headline">Forge funds the build.</h2>
           <div class="sub">YYZdata's applied-intelligence services arm is a revenue-generating practice that bootstraps the company and funds Signals development, not a distraction from it.</div>
-          <div class="grid cols2"><div class="card "><div class="label ">NON-DILUTIVE</div><div class="title">Forge is the cash engine</div><div class="body">Client services revenue extends runway before and alongside the raise.</div></div><div class="card live-card"><div class="label live">DELIVERY PROOF</div><div class="title">Same team, proven execution</div><div class="body">Forge engineers deliver Signals internally: the build muscle is already working.</div></div></div>
+          <div class="grid cols2"><div class="card "><div class="label ">NON-DILUTIVE</div><div class="title">Forge is the cash engine</div><div class="body">Client services revenue extends runway before and alongside the raise.</div></div><div class="card live-card"><div class="label live">BUILD PROOF</div><div class="title">Same team, proven execution</div><div class="body">Forge engineers build Signals internally: the build muscle is already working.</div></div></div>
         </div></section>
 <section class="slide"><div class="slide-inner">
           <div class="kicker">THE ASK</div>
           <h2 class="headline">$500K–$1M pre-seed SAFE, closing Q4 2026.</h2>
-          <div class="sub">One deployed site with a quotable KPI. A lighthouse in Fenway Park. A clean, non-dilutive services arm already generating revenue. Series A targeted for Q2–Q3 2027.</div>
+          <div class="sub">One live pilot site with a quotable KPI. A lighthouse in Fenway Park. A clean, non-dilutive services arm already generating revenue. Series A targeted for Q2–Q3 2027.</div>
           <div class="cta"><a href="mailto:info@yyzdata.com">Request the full deck</a></div>
         </div><div class="footer-brand">YYZdata Inc. · Confidential, not for distribution</div></section>
   </div>

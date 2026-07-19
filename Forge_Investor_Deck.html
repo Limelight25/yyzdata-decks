@@ -108,8 +108,25 @@
   .progress{position:fixed;top:0;left:0;height:3px;background:var(--blue);z-index:30;
     transition:width .55s cubic-bezier(.65,0,.24,1);box-shadow:0 0 12px rgba(76,141,255,.6);}
   @media (max-width:760px){
-    .grid.cols3,.grid.cols4{grid-template-columns:1fr 1fr;}
-    .navzone{width:12vw;}
+    .headerbar{height:60px;padding:0 6vw;}
+    .navzone{top:60px;width:0;}
+    .slide{padding:80px 6vw 78px;overflow-y:auto;-webkit-overflow-scrolling:touch;justify-content:flex-start;}
+    .slide-inner{margin:0;max-width:100%;}
+    .titleslide{justify-content:flex-start;}
+    .titleslide .slide-inner{margin:0;}
+    .headline{font-size:clamp(24px,6.6vw,32px);}
+    .titleslide h1{font-size:clamp(28px,8vw,40px);}
+    .sub,.titleslide .sub{font-size:14.5px;margin-top:12px;max-width:100%;}
+    .grid{gap:10px;margin-top:18px;}
+    .grid.cols2,.grid.cols3,.grid.cols4{grid-template-columns:1fr;}
+    .card{padding:14px 15px;}
+    .card .title{font-size:15.5px;}
+    .card .body{font-size:12.5px;}
+    .stat .num{font-size:clamp(24px,8vw,32px);}
+    .meta-row{gap:16px;margin-top:22px;}
+    .navdots{bottom:14px;right:6vw;}
+    .footer-brand{left:6vw;bottom:12px;font-size:10px;}
+    .cta{margin-top:22px;}
   }
 </style>
 </head>
@@ -129,48 +146,48 @@
           <div class="wordmark"><span class="logotext">YYZDATA · FORGE</span></div>
           <h1>Signals senses. Forge builds.</h1>
           <div class="sub">Forge is YYZdata's applied-intelligence services arm: a revenue-generating practice that bootstraps the company and funds the Signals build.</div>
-          <div class="meta-row"><div class="m">Non-dilutive</div><div class="m">Delivery proof</div><div class="m">ISO 27001 / ISO 9001</div></div>
+          <div class="meta-row"><div class="m">Non-dilutive</div><div class="m">Build proof</div><div class="m">ISO 27001 / ISO 9001</div></div>
         </div></section>
 <section class="slide"><div class="slide-inner">
           <div class="kicker">WHY FORGE EXISTS</div>
           <h2 class="headline">Capital efficiency, not a distraction.</h2>
-          <div class="sub">Every dollar Forge bills is a dollar of runway that doesn't come from dilution. Every project Forge delivers is proof the team can ship. It's the same engineers building Signals internally, credited at transfer price: one build muscle, two outputs.</div>
-          
+          <div class="sub">Every dollar Forge bills is a dollar of runway that doesn't come from dilution. Every project Forge completes is proof the team can build. It's the same engineers building Signals internally, credited at transfer price: one build muscle, two outputs.</div>
+
         </div></section>
 <section class="slide"><div class="slide-inner">
           <div class="kicker">FOUR LINES, ONE STUDIO</div>
           <h2 class="headline">Structured to compound.</h2>
           <div class="sub">Every custom build tries to become a product: patterns push down into Express templates or up into Products.</div>
-          <div class="grid cols4"><div class="card "><div class="label ">STUDIO</div><div class="title">Custom builds</div><div class="body">Client-owned enterprise and mid-market work, project plus retainer.</div></div><div class="card "><div class="label ">PRODUCTS</div><div class="title">YYZ-owned apps</div><div class="body">Licensed products: AI concierge, platform, vertical packs. The compounding line.</div></div><div class="card "><div class="label ">EXPRESS</div><div class="title">SMB, templated</div><div class="body">Fixed-price packages: storefront, ops automation, presence.</div></div><div class="card live-card"><div class="label live">SIGNALS DELIVERY</div><div class="title">Internal</div><div class="body">Forge engineers build Signals, credited via internal transfer price.</div></div></div>
+          <div class="grid cols4"><div class="card "><div class="label ">STUDIO</div><div class="title">Custom builds</div><div class="body">Client-owned enterprise and mid-market work, project plus retainer.</div></div><div class="card "><div class="label ">PRODUCTS</div><div class="title">YYZ-owned apps</div><div class="body">Licensed products: AI concierge, platform, vertical packs. The compounding line.</div></div><div class="card "><div class="label ">EXPRESS</div><div class="title">SMB, templated</div><div class="body">Fixed-price packages: storefront, ops automation, presence.</div></div><div class="card live-card"><div class="label live">SIGNALS BUILD</div><div class="title">Internal</div><div class="body">Forge engineers build Signals, credited via internal transfer price.</div></div></div>
         </div></section>
 <section class="slide"><div class="slide-inner">
           <div class="kicker">HOW ENGAGEMENTS RUN</div>
           <h2 class="headline">Assess. Build. Run.</h2>
           <div class="sub">A fixed-price assessment de-risks the relationship before any build commitment. Build is phased and fixed, with architecture signed off before code and acceptance gated per phase. Run is a monthly retainer once it's live.</div>
-          
+
         </div></section>
 <section class="slide"><div class="slide-inner">
           <div class="kicker">CREDIBILITY</div>
           <h2 class="headline">Not a first-time team.</h2>
           <div class="sub"></div>
-          <div class="grid cols2"><div class="card "><div class="label ">CERTIFIED</div><div class="title">ISO 27001 + ISO 9001</div><div class="body">Information security and quality management, certified.</div></div><div class="card "><div class="label ">PEDIGREE</div><div class="title">Built at Abbott</div><div class="body">Leadership shipped data systems in finance and life sciences before founding YYZdata.</div></div></div>
+          <div class="grid cols2"><div class="card "><div class="label ">CERTIFIED</div><div class="title">ISO 27001 + ISO 9001</div><div class="body">Information security and quality management, certified.</div></div><div class="card "><div class="label ">PEDIGREE</div><div class="title">Built at Abbott</div><div class="body">Leadership built data systems in finance and life sciences before founding YYZdata.</div></div></div>
         </div></section>
 <section class="slide"><div class="slide-inner">
           <div class="kicker">PROOF, NAMES WITHHELD</div>
-          <h2 class="headline">Delivered, not theoretical.</h2>
+          <h2 class="headline">Built, not theoretical.</h2>
           <div class="sub"></div>
-          <div class="grid cols2"><div class="card "><div class="label ">SEMICONDUCTOR</div><div class="title">Synthetic data at scale</div><div class="body">Training data pipeline for a global semiconductor company.</div></div><div class="card "><div class="label ">AEC / CONSTRUCTION</div><div class="title">Spreadsheet estate → governed platform</div><div class="body">Multi-tenant platform replacing spreadsheet chaos for an owner-side capital-projects consultancy.</div></div><div class="card "><div class="label ">RETAIL</div><div class="title">Packaged AI concierge</div><div class="body">Business-first AI concierge shipped for a specialty retailer.</div></div><div class="card "><div class="label ">AUTO FINANCE</div><div class="title">Trusted data for lending</div><div class="body">Governed data foundation for a regulated auto-finance lender.</div></div></div>
+          <div class="grid cols2"><div class="card "><div class="label ">SEMICONDUCTOR</div><div class="title">Synthetic data at scale</div><div class="body">Training data pipeline for a global semiconductor company.</div></div><div class="card "><div class="label ">AEC / CONSTRUCTION</div><div class="title">Spreadsheet estate → governed platform</div><div class="body">Multi-tenant platform replacing spreadsheet chaos for an owner-side capital-projects consultancy.</div></div><div class="card "><div class="label ">RETAIL</div><div class="title">Packaged AI concierge</div><div class="body">Business-first AI concierge, now live for a specialty retailer.</div></div><div class="card "><div class="label ">AUTO FINANCE</div><div class="title">Trusted data for lending</div><div class="body">Governed data foundation for a regulated auto-finance lender.</div></div></div>
         </div></section>
 <section class="slide"><div class="slide-inner">
           <div class="kicker">WHERE WE'RE WARM</div>
           <h2 class="headline">Construction, hospitality, auto, health.</h2>
           <div class="sub">Construction and AEC (including a BIM Stream channel), hospitality and venues, auto dealers, and healthcare and dental are the verticals with the warmest relationships and the clearest near-term pipeline.</div>
-          
+
         </div></section>
 <section class="slide"><div class="slide-inner">
           <div class="kicker">THE TAKEAWAY</div>
           <h2 class="headline">Forge de-risks the Signals raise.</h2>
-          <div class="sub">A working services business, real clients, real revenue, run by a team that's already shipped. That's the balance sheet behind the pitch.</div>
+          <div class="sub">A working services business, real clients, real revenue, run by a team that has already built and run real production systems. That's the balance sheet behind the pitch.</div>
           <div class="cta"><a href="mailto:info@yyzdata.com">Talk to us</a></div>
         </div><div class="footer-brand">YYZdata Inc. · Confidential, not for distribution</div></section>
   </div>
