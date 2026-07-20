@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>YYZdata Email Signature</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#16295C;--red:#C22833;--bred:#E23A45;--dark:#0B1738;--body:#2B3247;--muted:#6B7078;--faint:#9AA0AB;--hair:rgba(22,41,92,.16);}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--dark);color:#F4F4F2;font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding:40px 20px 80px;}
+  .wrap{max-width:720px;margin:0 auto;}
+  h1{font-weight:800;font-size:28px;letter-spacing:-.02em;}
+  h1 span{color:var(--bred);}
+  .sub{margin-top:8px;color:#9DA1A8;font-size:15px;line-height:1.6;}
+  .card{background:#fff;color:var(--body);padding:28px;margin-top:24px;}
+  label{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin:16px 0 6px;}
+  label:first-child{margin-top:0;}
+  input{width:100%;padding:10px 12px;font-family:'Archivo',system-ui,sans-serif;font-size:15px;color:var(--body);border:1px solid var(--hair);background:#fff;outline:none;}
+  input:focus{border-color:var(--navy);}
+  .preview{background:#fff;padding:24px;border:1px solid var(--hair);}
+  .btn{display:inline-block;border:none;cursor:pointer;font-family:'Archivo',system-ui,sans-serif;font-weight:700;font-size:15px;padding:14px 22px;margin:18px 12px 0 0;}
+  .btn-primary{background:var(--bred);color:#fff;}
+  .btn-secondary{background:transparent;color:#F4F4F2;border:1px solid rgba(255,255,255,.3);}
+  .btn:active{transform:translateY(1px);}
+  .ok{display:none;margin-left:6px;font-size:14px;color:#7BD88F;}
+  .steps{margin-top:36px;font-size:14px;line-height:1.75;color:#C9CCD2;}
+  .steps h2{font-weight:800;font-size:18px;color:#fff;margin:26px 0 8px;letter-spacing:-.01em;}
+  .steps b{color:#fff;}
+  .kicker{display:flex;align-items:center;gap:9px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--bred);margin-top:40px;}
+  .kicker::before{content:'';width:6px;height:6px;background:var(--bred);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>YYZ<span>data</span> email signature</h1>
+  <p class="sub">Fill in your details, hit Copy, paste into your email client. That's it.</p>
+
+  <div class="card">
+    <label for="f-name">Your name</label>
+    <input id="f-name" value="First Last" autocomplete="name">
+    <label for="f-title">Your title</label>
+    <input id="f-title" value="Your Title">
+    <label for="f-phone">Mobile (leave blank to omit)</label>
+    <input id="f-phone" value="+1-XXX-XXX-XXXX" autocomplete="tel">
+    <label for="f-email">Your YYZdata email</label>
+    <input id="f-email" value="you@yyzdata.com" autocomplete="email">
+  </div>
+
+  <div class="kicker">Preview</div>
+  <div class="preview" id="preview"></div>
+
+  <button class="btn btn-primary" id="copy-rich">Copy signature</button><span class="ok" id="ok-rich">Copied.</span>
+  <button class="btn btn-secondary" id="copy-plain">Copy plain version (iPhone Mail)</button><span class="ok" id="ok-plain">Copied.</span>
+
+  <div class="steps">
+    <h2>Install it</h2>
+    <p><b>Gmail (web):</b> click Copy signature above, then in Gmail: See all settings &rarr; General &rarr; Signature &rarr; Create new &rarr; paste &rarr; set it under "For new emails use" &rarr; Save Changes at the bottom of the page.</p>
+    <h2>Gmail app on your phone</h2>
+    <p>Nothing to do. Once it is set on the web, the Gmail app uses it automatically. This is the only phone client that keeps the logo.</p>
+    <h2>Apple Mail (Mac)</h2>
+    <p>Mail &rarr; Settings &rarr; Signatures &rarr; select your account &rarr; + &rarr; first uncheck "Always match my default message font", then click into the right pane and paste.</p>
+    <h2>iPhone Mail app</h2>
+    <p>Settings &rarr; Mail &rarr; Signature. Apple strips images and formatting there, so use the plain version button above. The logo will not carry in iPhone Mail; use the Gmail app for the full look.</p>
+  </div>
+</div>
+
+<script>
+const ICON = "https://lh3.googleusercontent.com/d/1vEkEvVI-taggGhHLIc0CEaMA6rhI3xR0";
+const DISC = 'CONFIDENTIAL &amp; PRIVILEGED. This email and any attachments contain confidential and privileged information. By accessing this email, you agree not to share or disclose any information contained herein without express written consent from YYZdata Inc.';
+const $ = id => document.getElementById(id);
+const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+function values(){
+  return {
+    name: esc($('f-name').value.trim() || 'First Last'),
+    title: esc($('f-title').value.trim() || 'Your Title'),
+    phone: esc($('f-phone').value.trim()),
+    email: esc($('f-email').value.trim() || 'you@yyzdata.com')
+  };
+}
+
+function sigHtml(){
+  const v = values();
+  const phone = (v.phone && v.phone.indexOf('XXX') === -1) ? 'Mobile: ' + v.phone + '<br>' : (v.phone ? 'Mobile: ' + v.phone + '<br>' : '');
+  return '<div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#33363C;">'
+    + '<table cellpadding="0" cellspacing="0" border="0"><tr>'
+    + '<td style="vertical-align:middle;"><img src="' + ICON + '" width="40" height="40" alt="" style="display:block;"></td>'
+    + '<td style="vertical-align:middle;padding-left:10px;font-family:Helvetica,Arial,sans-serif;font-size:22px;letter-spacing:-0.3px;"><span style="font-weight:bold;">YYZ</span><span style="font-weight:600;color:#E23A45;">data</span></td>'
+    + '</tr></table><br>'
+    + '<div style="border-left:3px solid #E23A45;padding-left:14px;">'
+    + '<span style="font-weight:bold;font-size:15px;color:#101114;">' + v.name + '</span><br>'
+    + '<span style="color:#8A8F99;">' + v.title + ' &middot; YYZdata Inc.</span><br><br>'
+    + phone
+    + '<a href="mailto:' + v.email + '" style="color:#E23A45;">' + v.email + '</a> &nbsp;&middot;&nbsp; <a href="https://yyzdata.com" style="color:#E23A45;">yyzdata.com</a>'
+    + '</div><br>'
+    + '<span style="font-size:10px;color:#8A8F99;">' + DISC + '</span></div>';
+}
+
+function sigPlain(){
+  const v = values();
+  const lines = [v.name.replace(/&amp;/g,'&'), v.title.replace(/&amp;/g,'&') + ' | YYZdata Inc.'];
+  if (v.phone) lines.push('Mobile: ' + v.phone);
+  lines.push(v.email + ' | yyzdata.com');
+  lines.push('');
+  lines.push('CONFIDENTIAL & PRIVILEGED. This email and any attachments contain confidential and privileged information. By accessing this email, you agree not to share or disclose any information contained herein without express written consent from YYZdata Inc.');
+  return lines.join('\n');
+}
+
+function render(){ $('preview').innerHTML = sigHtml(); }
+['f-name','f-title','f-phone','f-email'].forEach(id => $(id).addEventListener('input', render));
+render();
+
+function flash(id){ const el = $(id); el.style.display = 'inline'; setTimeout(() => el.style.display = 'none', 2000); }
+
+$('copy-rich').addEventListener('click', async () => {
+  const html = sigHtml();
+  try {
+    await navigator.clipboard.write([new ClipboardItem({
+      'text/html': new Blob([html], {type: 'text/html'}),
+      'text/plain': new Blob([sigPlain()], {type: 'text/plain'})
+    })]);
+    flash('ok-rich');
+  } catch (e) {
+    const r = document.createRange(); r.selectNodeContents($('preview'));
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    document.execCommand('copy'); s.removeAllRanges();
+    flash('ok-rich');
+  }
+});
+
+$('copy-plain').addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(sigPlain()); flash('ok-plain'); }
+  catch (e) { alert('Copy failed. Select the preview text manually.'); }
+});
+</script>
+</body>
+</html>
