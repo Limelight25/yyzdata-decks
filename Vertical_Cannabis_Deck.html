@@ -141,7 +141,18 @@
     letter-spacing:.05em;text-transform:uppercase;margin-top:18px;}
   .src-note{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#4A5164;
     letter-spacing:.04em;margin-top:16px;}
-  @media (max-width:760px){.navbtns{right:6vw;bottom:56px;}.navdots{display:none;}}
+  .slide{padding:120px 9vw 110px;}
+  @media (max-height:880px){
+    .headline{font-size:clamp(24px,3.4vw,40px);}
+    .titleslide h1{font-size:clamp(30px,4.8vw,58px);}
+    .sub{margin-top:12px;font-size:clamp(13px,1.25vw,16px);}
+    .card{padding:14px 16px;}
+    .card .body{font-size:12.5px;}
+    .grid{gap:11px;margin-top:20px;}
+    .slide{padding:104px 9vw 96px;}
+  }
+  @media (max-width:760px){.navbtns{right:6vw;bottom:14px;}.navdots{display:none;}
+    .slide{padding:80px 6vw 90px;}}
 </style>
 </head>
 <body>
@@ -151,7 +162,7 @@
     <span class="sep">/</span>
     <span class="ctx">REGULATED RETAIL</span>
   </div>
-  <div class="counter"><span id="cnum">1</span> / 6</div>
+  <div class="counter"><span id="cnum">1</span> / 7</div>
 </div>
 <div class="progress" id="progress" style="width:0%"></div>
 <div class="deck">
@@ -160,8 +171,9 @@
 <section class="slide"><div class="slide-inner"><div class="kicker">Your problem, in your numbers</div><div class="rule"></div><h2 class="headline">You bought more cameras than any retailer your size.</h2><div class="sub">Coverage of entrances, sales floor, POS, storage and vault, with retention your state dictates. All cost, no intelligence.</div><div class="grid cols2"><div class="card"><div class="label">Compliance</div><div class="title">A camera estate that only records</div><div class="body">Mandated coverage and retention, reviewed only when something already went wrong.</div></div><div class="card"><div class="label">Shrink</div><div class="title">Mostly internal</div><div class="body">Industry analyses attribute the large majority of loss in regulated retail to internal theft, not break-ins.</div></div><div class="card"><div class="label">Peak hours</div><div class="title">Lines cost conversion</div><div class="body">Register queues at rush decide baskets. Nobody measures them.</div></div><div class="card"><div class="label">Cash</div><div class="title">High stakes, thin margins</div><div class="body">Cash-heavy operations and compressed prices leave no room for silent leaks.</div></div></div><div class="src-note">Shrink: industry loss-prevention analyses (Cova and others).</div></div></section>
 <section class="slide"><div class="slide-inner"><div class="kicker">What Signals answers here</div><div class="rule"></div><h2 class="headline">Intelligence without touching compliance.</h2><div class="grid cols2"><div class="card"><div class="label">Read-only</div><div class="title">Rides your existing system</div><div class="body">A low-bandwidth, read-only stream. Your compliance recorder keeps doing its legally required job, untouched, always.</div></div><div class="card"><div class="label">Loss</div><div class="title">Patterns, not accusations</div><div class="body">Zone-level counts with timestamps, after-hours activity in sensitive zones, and the exact moment to pull from your own retained footage.</div></div><div class="card"><div class="label">Ops</div><div class="title">Registers and rush</div><div class="body">Occupancy and register-area traffic against your POS, so staffing follows the actual day.</div></div><div class="card"><div class="label">Review</div><div class="title">One-meeting approval</div><div class="body">Aggregate-only by default means no faces, no identity, no video stored by us. Compliance officers clear it fast.</div></div></div></div></section>
 <section class="slide"><div class="slide-inner"><div class="kicker">Privacy and compliance</div><div class="rule"></div><h2 class="headline">Built for a regulated room.</h2><div class="sub">We never become the recorder and never interfere with mandated retention. By default we keep only aggregate counts and events. Where your state or your SOP needs something specific, capabilities are configured to the rule, documented, and your call. Your data is yours; any training use is explicit and licensed.</div></div></section>
-<section class="slide"><div class="slide-inner"><div class="kicker">How it lands</div><div class="rule"></div><h2 class="headline">Live in days, priced for a signature.</h2><div class="sub">Your cameras almost certainly qualify: if they speak standard protocols, there is nothing to buy and no install, and we confirm it in one call. Software subscription priced for a store manager's signature. Cloud-locked systems are the exception; we tell you honestly and offer a kit instead.</div></div></section>
-<section class="slide"><div class="slide-inner"><div class="kicker">Next step</div><div class="rule"></div><h2 class="headline">See it on a venue like yours.</h2><div class="sub">Thirty minutes with the live system and a walkthrough for your venue type. Straight answer on fit, including whether your cameras qualify.</div><div class="cta"><a href="mailto:hello@yyzdata.com">hello@yyzdata.com</a></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">How it lands</div><div class="rule"></div><h2 class="headline">Priced for a signature, not a committee.</h2><div class="sub">Your cameras almost certainly qualify: if they speak standard protocols, there is nothing to buy and no install, and we confirm it in one call. Software subscription priced for a store manager's signature. Cloud-locked systems are the exception; we tell you honestly and offer a kit instead.</div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Where it goes</div><div class="rule"></div><h2 class="headline">Cameras first. Then everything else.</h2><div class="sub">The same layer is built to take in the rest of what runs the business: point of sale, reservations, labor, sensors, documents. And through Forge, the custom pieces your operation needs, built to your process, not the other way around. Start with one question answered; grow at your pace.</div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Next step</div><div class="rule"></div><h2 class="headline">Request a demo.</h2><div class="sub">We will show you what Signals sees on a venue like yours and give you a straight answer on fit, including whether your cameras qualify.</div><div class="cta"><a href="mailto:hello@yyzdata.com">hello@yyzdata.com</a></div></div></section>
   </div>
   <div class="navzone left" onclick="go(-1)"></div>
   <div class="navzone right" onclick="go(1)"></div>
@@ -206,7 +218,7 @@
 })();
 </script>
 <script>
-  const total = 6;
+  const total = 7;
   let idx = 0;
   const track = document.getElementById('track');
   const dotsWrap = document.getElementById('dots');

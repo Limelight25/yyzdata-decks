@@ -141,7 +141,18 @@
     letter-spacing:.05em;text-transform:uppercase;margin-top:18px;}
   .src-note{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#4A5164;
     letter-spacing:.04em;margin-top:16px;}
-  @media (max-width:760px){.navbtns{right:6vw;bottom:56px;}.navdots{display:none;}}
+  .slide{padding:120px 9vw 110px;}
+  @media (max-height:880px){
+    .headline{font-size:clamp(24px,3.4vw,40px);}
+    .titleslide h1{font-size:clamp(30px,4.8vw,58px);}
+    .sub{margin-top:12px;font-size:clamp(13px,1.25vw,16px);}
+    .card{padding:14px 16px;}
+    .card .body{font-size:12.5px;}
+    .grid{gap:11px;margin-top:20px;}
+    .slide{padding:104px 9vw 96px;}
+  }
+  @media (max-width:760px){.navbtns{right:6vw;bottom:14px;}.navdots{display:none;}
+    .slide{padding:80px 6vw 90px;}}
 </style>
 </head>
 <body>
@@ -151,7 +162,7 @@
     <span class="sep">/</span>
     <span class="ctx">SIGNALS</span>
   </div>
-  <div class="counter"><span id="cnum">1</span> / 8</div>
+  <div class="counter"><span id="cnum">1</span> / 9</div>
 </div>
 <div class="progress" id="progress" style="width:0%"></div>
 <div class="deck">
@@ -160,10 +171,11 @@
 <section class="slide"><div class="slide-inner"><div class="kicker">The gap</div><div class="rule"></div><h2 class="headline">Cameras record. They don’t tell you anything.</h2><div class="sub">Lines build. The floor gets slammed. A great night and a bad one look identical on the recorder. All of it happens on camera, and none of it reaches the person who could act in time.</div></div></section>
 <section class="slide"><div class="slide-inner"><div class="kicker">What Signals answers</div><div class="rule"></div><h2 class="headline">The questions you actually ask.</h2><div class="grid cols2"><div class="card"><div class="label">Right now</div><div class="title">How many people are here?</div><div class="body">Live occupancy by zone: door, floor, bar, patio.</div></div><div class="card"><div class="label">Staffing</div><div class="title">Are we staffed to the crowd?</div><div class="body">Alerts to a manager’s phone before traffic outruns the schedule, not after.</div></div><div class="card"><div class="label">Revenue</div><div class="title">Does traffic become sales?</div><div class="body">Door counts next to your POS numbers on one screen, night by night.</div></div><div class="card"><div class="label">Loss</div><div class="title">What happened after close?</div><div class="body">Aggregate zone events with timestamps. We point to the exact moment on your own recorder.</div></div></div></div></section>
 <section class="slide"><div class="slide-inner"><div class="kicker">How it works</div><div class="rule"></div><h2 class="headline">Overlay, not replace.</h2><div class="sub">Signals reads the cameras you already run: read-only, low-bandwidth, alongside your existing recorder, which keeps doing its job untouched. Processing happens on site, on a small box we manage. Answers arrive as a live dashboard and alerts to the right phone.</div></div></section>
-<section class="slide"><div class="slide-inner"><div class="kicker">Privacy</div><div class="rule"></div><h2 class="headline">By design, configured to your rules.</h2><div class="grid cols3"><div class="card"><div class="label">Default</div><div class="title">Aggregates only</div><div class="body">Counts and events. No faces, no identity, no video stored by us. Frames are processed in memory and dropped.</div></div><div class="card"><div class="label">Your call</div><div class="title">Opt-ins, not surprises</div><div class="body">What gets enabled beyond the default is driven by your needs and your regulatory environment, never by our defaults.</div></div><div class="card"><div class="label">Your data</div><div class="title">Yours, on paper</div><div class="body">We do not want your data and we do not quietly keep it. Any training use is explicit, licensed, and written down.</div></div></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Privacy</div><div class="rule"></div><h2 class="headline">By design, configured to your rules.</h2><div class="grid cols3"><div class="card"><div class="label">Default</div><div class="title">Aggregates, on site</div><div class="body">Counts and events, processed inside your venue. Your video never needs to leave the building, and it is not stored on our systems.</div></div><div class="card"><div class="label">Your call</div><div class="title">Capabilities, not surprises</div><div class="body">What gets enabled is driven by your needs and your regulatory environment. Where a rule requires more, we configure to the rule, deliberately and documented.</div></div><div class="card"><div class="label">Your data</div><div class="title">Yours, on paper</div><div class="body">Your data stays yours. Any training use is explicit, licensed, and written down.</div></div></div></div></section>
 <section class="slide"><div class="slide-inner"><div class="kicker">Getting started</div><div class="rule"></div><h2 class="headline">Live in days, not quarters.</h2><div class="grid cols3"><div class="card"><div class="label">Option one</div><div class="title">Your cameras</div><div class="body">If they speak standard protocols, and most do, there is nothing to buy and no install. We tell you in one call.</div></div><div class="card"><div class="label">Option two</div><div class="title">Our kit</div><div class="body">A preconfigured camera kit on loan, shipped ready. Plug in power and cameras; we finish remotely.</div></div><div class="card"><div class="label">Either way</div><div class="title">A subscription</div><div class="body">Priced so an owner can say yes. No capital purchase, no long lock-in to start.</div></div></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Where it goes</div><div class="rule"></div><h2 class="headline">Cameras are the first signal, not the last.</h2><div class="sub">The same layer is built to take in the rest of what runs your business: point of sale, reservations, labor, sensors, documents. One picture instead of five systems, and through Forge, the custom pieces your operation needs, built to your process. You do not adapt your business to our system. Our system adapts to your business.</div></div></section>
 <section class="slide"><div class="slide-inner"><div class="kicker">See it</div><div class="rule"></div><h2 class="headline">A working system, not a mock-up.</h2><div class="sub">The live prototype runs on real cameras with models trained on real venue footage. Interactive walkthroughs exist for venue types from lounges to stadium concourses; we’ll show you the one closest to your business.</div><div class="cta"><a href="https://yyzdata.com/signals">Explore Signals &#8594;</a></div></div></section>
-<section class="slide"><div class="slide-inner"><div class="kicker">Next step</div><div class="rule"></div><h2 class="headline">Thirty minutes, your questions, the live system.</h2><div class="sub">No slides on the call. We walk the working dashboard, look at your camera setup, and give you a straight answer on fit.</div><div class="cta"><a href="mailto:hello@yyzdata.com">hello@yyzdata.com</a></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Next step</div><div class="rule"></div><h2 class="headline">Request a demo.</h2><div class="sub">We’ll show you the working system, look at how your venue runs, and give you a straight answer on fit, including whether your cameras qualify.</div><div class="cta"><a href="mailto:hello@yyzdata.com">hello@yyzdata.com</a></div></div></section>
   </div>
   <div class="navzone left" onclick="go(-1)"></div>
   <div class="navzone right" onclick="go(1)"></div>
@@ -208,7 +220,7 @@
 })();
 </script>
 <script>
-  const total = 8;
+  const total = 9;
   let idx = 0;
   const track = document.getElementById('track');
   const dotsWrap = document.getElementById('dots');

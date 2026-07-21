@@ -141,7 +141,18 @@
     letter-spacing:.05em;text-transform:uppercase;margin-top:18px;}
   .src-note{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#4A5164;
     letter-spacing:.04em;margin-top:16px;}
-  @media (max-width:760px){.navbtns{right:6vw;bottom:56px;}.navdots{display:none;}}
+  .slide{padding:120px 9vw 110px;}
+  @media (max-height:880px){
+    .headline{font-size:clamp(24px,3.4vw,40px);}
+    .titleslide h1{font-size:clamp(30px,4.8vw,58px);}
+    .sub{margin-top:12px;font-size:clamp(13px,1.25vw,16px);}
+    .card{padding:14px 16px;}
+    .card .body{font-size:12.5px;}
+    .grid{gap:11px;margin-top:20px;}
+    .slide{padding:104px 9vw 96px;}
+  }
+  @media (max-width:760px){.navbtns{right:6vw;bottom:14px;}.navdots{display:none;}
+    .slide{padding:80px 6vw 90px;}}
 </style>
 </head>
 <body>
@@ -151,7 +162,7 @@
     <span class="sep">/</span>
     <span class="ctx">LOUNGE</span>
   </div>
-  <div class="counter"><span id="cnum">1</span> / 6</div>
+  <div class="counter"><span id="cnum">1</span> / 7</div>
 </div>
 <div class="progress" id="progress" style="width:0%"></div>
 <div class="deck">
@@ -160,8 +171,9 @@
 <section class="slide"><div class="slide-inner"><div class="kicker">Your problem, in your numbers</div><div class="rule"></div><h2 class="headline">Labor is the bill you can actually move.</h2><div class="sub">Hospitality labor runs 25 to 35 percent of revenue and climbing. Every over-staffed slow shift and every slammed floor is money.</div><div class="grid cols2"><div class="card"><div class="label">Staffing</div><div class="title">Scheduled on a hunch</div><div class="body">The schedule is set days ahead. The crowd decides on the night.</div></div><div class="card"><div class="label">Walkouts</div><div class="title">Invisible until close-out</div><div class="body">Guests who leave over a wait never appear in any report. Just missing revenue.</div></div><div class="card"><div class="label">The room</div><div class="title">Nobody sees it whole</div><div class="body">Door, floor, bar and patio each have eyes on them. Nobody has numbers.</div></div><div class="card"><div class="label">Systems</div><div class="title">POS and door never meet</div><div class="body">Covers and sales in one system, traffic in nobody's.</div></div></div><div class="src-note">Labor figures: National Restaurant Association, 2026.</div></div></section>
 <section class="slide"><div class="slide-inner"><div class="kicker">What Signals answers here</div><div class="rule"></div><h2 class="headline">Four answers, one screen.</h2><div class="grid cols2"><div class="card"><div class="label">Live</div><div class="title">Occupancy by zone</div><div class="body">Door, floor, bar, patio: how many, right now, and versus this time last week.</div></div><div class="card"><div class="label">Alerts</div><div class="title">Understaffing warnings</div><div class="body">A message to the manager's phone before traffic outruns the floor.</div></div><div class="card"><div class="label">Revenue</div><div class="title">Traffic next to sales</div><div class="body">Door counts against POS, night by night. Know which nights convert and which leak.</div></div><div class="card"><div class="label">After hours</div><div class="title">Aggregate zone events</div><div class="body">Timestamps for anything moving when nothing should be. Pull the moment from your own recorder.</div></div></div></div></section>
 <section class="slide"><div class="slide-inner"><div class="kicker">Privacy and compliance</div><div class="rule"></div><h2 class="headline">Nothing stored that shouldn't be.</h2><div class="sub">Aggregate counts and events by default: no faces, no identity, no video stored by us. Frames are processed in memory on a box in your venue and dropped. What gets enabled beyond the default is your call and your rules. Your data is yours; any training use is explicit and licensed.</div></div></section>
-<section class="slide"><div class="slide-inner"><div class="kicker">How it lands</div><div class="rule"></div><h2 class="headline">Live in days, priced for a signature.</h2><div class="sub">On cameras you already own, live in days with no install. Or a managed kit on loan: plug in power and cameras, we finish remotely. Subscription priced so an owner signs it: no capital purchase, no long lock-in to start.</div></div></section>
-<section class="slide"><div class="slide-inner"><div class="kicker">Next step</div><div class="rule"></div><h2 class="headline">See it on a venue like yours.</h2><div class="sub">Thirty minutes with the live system and a walkthrough for your venue type. Straight answer on fit, including whether your cameras qualify.</div><div class="cta"><a href="mailto:hello@yyzdata.com">hello@yyzdata.com</a></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">How it lands</div><div class="rule"></div><h2 class="headline">Priced for a signature, not a committee.</h2><div class="sub">On cameras you already own, or a managed kit on loan: plug in power and cameras, we finish remotely. Subscription priced so an owner signs it: no capital purchase, no long lock-in to start. And your floor team gets a heads-up before the rush, not surveillance: the system exists to make their shift easier.</div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Where it goes</div><div class="rule"></div><h2 class="headline">Cameras first. Then everything else.</h2><div class="sub">The same layer is built to take in the rest of what runs the business: point of sale, reservations, labor, sensors, documents. And through Forge, the custom pieces your operation needs, built to your process, not the other way around. Start with one question answered; grow at your pace.</div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Next step</div><div class="rule"></div><h2 class="headline">Request a demo.</h2><div class="sub">We will show you what Signals sees on a venue like yours and give you a straight answer on fit, including whether your cameras qualify.</div><div class="cta"><a href="mailto:hello@yyzdata.com">hello@yyzdata.com</a></div></div></section>
   </div>
   <div class="navzone left" onclick="go(-1)"></div>
   <div class="navzone right" onclick="go(1)"></div>
@@ -206,7 +218,7 @@
 })();
 </script>
 <script>
-  const total = 6;
+  const total = 7;
   let idx = 0;
   const track = document.getElementById('track');
   const dotsWrap = document.getElementById('dots');

@@ -141,7 +141,18 @@
     letter-spacing:.05em;text-transform:uppercase;margin-top:18px;}
   .src-note{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#4A5164;
     letter-spacing:.04em;margin-top:16px;}
-  @media (max-width:760px){.navbtns{right:6vw;bottom:56px;}.navdots{display:none;}}
+  .slide{padding:120px 9vw 110px;}
+  @media (max-height:880px){
+    .headline{font-size:clamp(24px,3.4vw,40px);}
+    .titleslide h1{font-size:clamp(30px,4.8vw,58px);}
+    .sub{margin-top:12px;font-size:clamp(13px,1.25vw,16px);}
+    .card{padding:14px 16px;}
+    .card .body{font-size:12.5px;}
+    .grid{gap:11px;margin-top:20px;}
+    .slide{padding:104px 9vw 96px;}
+  }
+  @media (max-width:760px){.navbtns{right:6vw;bottom:14px;}.navdots{display:none;}
+    .slide{padding:80px 6vw 90px;}}
 </style>
 </head>
 <body>
@@ -161,8 +172,8 @@
 <section class="slide"><div class="slide-inner"><div class="kicker">What we deploy</div><div class="rule"></div><h2 class="headline">Your venue, instrumented.</h2><div class="sub">Cameras you already have, or a kit we bring on loan. A live dashboard for your roles: owner, floor, security. Alerts to the right phone, tuned to your thresholds, your hours, your rules.</div></div></section>
 <section class="slide"><div class="slide-inner"><div class="kicker">What you get</div><div class="rule"></div><h2 class="headline">Partner terms, not customer terms.</h2><div class="grid cols2"><div class="card"><div class="label">Price</div><div class="title">Partner pricing for the partnership</div><div class="body">The build-partner period is priced as a partnership, not a subscription. Terms agreed up front, in writing.</div></div><div class="card"><div class="label">Influence</div><div class="title">The product bends toward you</div><div class="body">Your requests move to the front of the build queue. Features get shaped around your operation first.</div></div><div class="card"><div class="label">First look</div><div class="title">Everything early</div><div class="body">New capabilities land at your venue before they land anywhere else.</div></div><div class="card"><div class="label">The story</div><div class="title">Told with your approval</div><div class="body">When it works, the before-and-after becomes a case study, only with your sign-off, framed how you want it.</div></div></div></div></section>
 <section class="slide"><div class="slide-inner"><div class="kicker">What we ask</div><div class="rule"></div><h2 class="headline">Three things, all on paper.</h2><div class="grid cols3"><div class="card"><div class="label">Access</div><div class="title">The venue and the feedback</div><div class="body">Room to install and tune, and your honest reaction, especially when something misses.</div></div><div class="card"><div class="label">Data</div><div class="title">An explicit, licensed agreement</div><div class="body">Aggregates by default. If we use footage samples to train models, it is a separate written license: time-boxed, revocable, transparent.</div></div><div class="card"><div class="label">Reference</div><div class="title">When it earns it</div><div class="body">A conversation with the next operator or investor, once the numbers are real.</div></div></div></div></section>
-<section class="slide"><div class="slide-inner"><div class="kicker">How it runs</div><div class="rule"></div><h2 class="headline">Two weeks to live, then we iterate.</h2><div class="sub">Install and tune in the first days. A baseline week so the numbers mean something. Then weekly working check-ins: what the system caught, what it missed, what gets built next. Either side can end the partnership; everything installed keeps working.</div></div></section>
-<section class="slide"><div class="slide-inner"><div class="kicker">Next step</div><div class="rule"></div><h2 class="headline">Pick the start week.</h2><div class="sub">One conversation to agree terms, one visit to install, and your venue starts talking.</div><div class="cta"><a href="mailto:hello@yyzdata.com">hello@yyzdata.com</a></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">How it runs</div><div class="rule"></div><h2 class="headline">Install. Baseline. Iterate.</h2><div class="sub">We install and tune, take a baseline so the numbers mean something, then work in regular sessions: what the system caught, what it missed, what gets built next. How long each step takes depends on your environment, and we will be straight about it before we start. Either side can end the partnership; everything installed keeps working.</div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Next step</div><div class="rule"></div><h2 class="headline">One conversation.</h2><div class="sub">We agree the terms, put the data license on paper, and get your venue talking.</div><div class="cta"><a href="mailto:hello@yyzdata.com">hello@yyzdata.com</a></div></div></section>
   </div>
   <div class="navzone left" onclick="go(-1)"></div>
   <div class="navzone right" onclick="go(1)"></div>

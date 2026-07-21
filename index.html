@@ -141,7 +141,18 @@
     letter-spacing:.05em;text-transform:uppercase;margin-top:18px;}
   .src-note{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#4A5164;
     letter-spacing:.04em;margin-top:16px;}
-  @media (max-width:760px){.navbtns{right:6vw;bottom:56px;}.navdots{display:none;}}
+  .slide{padding:120px 9vw 110px;}
+  @media (max-height:880px){
+    .headline{font-size:clamp(24px,3.4vw,40px);}
+    .titleslide h1{font-size:clamp(30px,4.8vw,58px);}
+    .sub{margin-top:12px;font-size:clamp(13px,1.25vw,16px);}
+    .card{padding:14px 16px;}
+    .card .body{font-size:12.5px;}
+    .grid{gap:11px;margin-top:20px;}
+    .slide{padding:104px 9vw 96px;}
+  }
+  @media (max-width:760px){.navbtns{right:6vw;bottom:14px;}.navdots{display:none;}
+    .slide{padding:80px 6vw 90px;}}
 
   html,body{overflow:auto;}
   .pickwrap{min-height:100vh;display:flex;flex-direction:column;padding:70px 9vw 90px;}
