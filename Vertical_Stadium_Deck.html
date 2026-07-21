@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YYZdata &middot; Deck Library</title>
+<title>YYZdata &middot; STADIUM</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Orbitron:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -142,50 +142,34 @@
   .src-note{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#4A5164;
     letter-spacing:.04em;margin-top:16px;}
   @media (max-width:760px){.navbtns{right:6vw;bottom:56px;}.navdots{display:none;}}
-
-  html,body{overflow:auto;}
-  .pickwrap{min-height:100vh;display:flex;flex-direction:column;padding:70px 9vw 90px;}
-  .seckick{margin-top:40px;}
-  .pickgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px;max-width:1120px;}
-  a.pick{text-decoration:none;display:block;}
-  a.pick .card{transition:border-color .2s, transform .2s;height:100%;}
-  a.pick:hover .card{border-color:rgba(76,141,255,.5);transform:translateY(-2px);}
-  @media (max-width:900px){.pickgrid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
-<div class="pickwrap">
-  <img src="logo-red.png" alt="YYZDATA" style="height:44px;width:auto;align-self:flex-start;">
-  <div class="kicker" style="margin-top:20px;">Deck library</div>
-  <h1 class="headline" style="font-size:clamp(28px,4vw,48px);margin-top:8px;">Pick by audience. Send the link.</h1>
-  <div class="sub">Every deck link works on its own with the deck code. Arrow keys or the Next button move slides.</div>
-
-  <div class="kicker seckick">For investors</div>
-  <div class="pickgrid">
-    <a class="pick" href="YYZdata_Investor_Deck.html"><div class="card live-card"><div class="label live">YYZDATA &middot; INVESTOR</div><div class="title">The seed deck</div><div class="body">Two engines, market, moat, use of funds, the $1M ask.</div></div></a>
+<div class="headerbar">
+  <div class="brand">
+    <img src="logo-red.png" alt="YYZDATA" class="logo"/>
+    <span class="sep">/</span>
+    <span class="ctx">STADIUM</span>
   </div>
-
-  <div class="kicker seckick">For customers &middot; by venue</div>
-  <div class="pickgrid">
-    <a class="pick" href="Vertical_Lounge_Deck.html"><div class="card"><div class="label">LOUNGE &middot; RESTAURANT</div><div class="title">Staff the crowd you have</div><div class="body">Labor, walkouts, traffic vs sales.</div></div></a>
-    <a class="pick" href="Vertical_Cannabis_Deck.html"><div class="card"><div class="label">REGULATED RETAIL</div><div class="title">Cameras that run the store</div><div class="body">Rides the compliance estate, read-only.</div></div></a>
-    <a class="pick" href="Vertical_Stadium_Deck.html"><div class="card"><div class="label">BALLPARK &middot; STADIUM</div><div class="title">The line is the leak</div><div class="body">Queue and flow intelligence, zero identity risk.</div></div></a>
-    <a class="pick" href="Signals_Prospect_Deck.html"><div class="card"><div class="label">SIGNALS &middot; GENERAL</div><div class="title">The walkthrough</div><div class="body">Any venue: what it answers, how it lands.</div></div></a>
-    <a class="pick" href="Forge_Prospect_Deck.html"><div class="card"><div class="label">FORGE &middot; SERVICES</div><div class="title">The service catalog</div><div class="body">Offers, pricing, engagement model, proof.</div></div></a>
+  <div class="counter"><span id="cnum">1</span> / 6</div>
+</div>
+<div class="progress" id="progress" style="width:0%"></div>
+<div class="deck">
+  <div class="track" id="track">
+<section class="slide titleslide"><div class="slide-inner"><div class="wordmark"><span class="logotext">SIGNALS &middot; BALLPARK &amp; STADIUM</span></div><h1>The line is the leak.</h1><div class="sub">Most guests will abandon a concession purchase when the wait looks long. Signals turns an existing camera estate into queue and flow intelligence, with zero identity risk.</div><div class="meta-row"><div class="m">Live walkthrough available</div><div class="m">hello@yyzdata.com</div></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Your problem, in your numbers</div><div class="rule"></div><h2 class="headline">Concessions lose to the concourse.</h2><div class="sub">The cameras already cover every line in the building. None of them shortens one.</div><div class="grid cols2"><div class="card"><div class="label">Abandonment</div><div class="title">Most guests give up</div><div class="body">Over 80 percent of fans report abandoning a concession purchase; 45 percent walk when a line merely looks long.</div></div><div class="card"><div class="label">Per-cap</div><div class="title">The number that moves</div><div class="body">Fans estimate meaningful per-game spend, and most say they would spend more if waits were cut.</div></div><div class="card"><div class="label">Staffing</div><div class="title">Static against surge</div><div class="body">Stands are staffed to the schedule while demand follows the game clock.</div></div><div class="card"><div class="label">Risk</div><div class="title">Biometrics are a lawsuit</div><div class="body">Identity-based systems draw litigation and press. Operations intelligence should not.</div></div></div><div class="src-note">Oracle concessions survey; MLB fan study, April 2025.</div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">What Signals answers here</div><div class="rule"></div><h2 class="headline">Flow intelligence across the estate.</h2><div class="grid cols2"><div class="card"><div class="label">Queues</div><div class="title">Length and wait, live</div><div class="body">Every stand and gate, measured continuously, alerts before a line becomes an exit.</div></div><div class="card"><div class="label">Flow</div><div class="title">Concourse movement</div><div class="body">Where crowds build, which stands starve, how the building actually empties.</div></div><div class="card"><div class="label">Staffing</div><div class="title">Redeploy to demand</div><div class="body">Move people to where the next surge is forming, not where the last one was.</div></div><div class="card"><div class="label">Zero identity</div><div class="title">Aggregate by design</div><div class="body">Counts and flows only. No faces, no identity. The version a general counsel approves.</div></div></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Privacy and compliance</div><div class="rule"></div><h2 class="headline">The privacy posture is the point.</h2><div class="sub">Aggregate-only by design: no biometric templates, no identity, processing on site. In a climate where venue biometrics generate lawsuits and headlines, an operations layer with zero identity risk is not a compromise. It is the reason this gets approved.</div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">How it lands</div><div class="rule"></div><h2 class="headline">Live in days, priced for a signature.</h2><div class="sub">A phased program, not a rip-and-replace: start with a handful of stands and gates on the existing camera estate, prove the numbers against per-cap, then widen zone by zone. Delivered with an integrator where one is in place.</div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Next step</div><div class="rule"></div><h2 class="headline">See it on a venue like yours.</h2><div class="sub">Thirty minutes with the live system and a walkthrough for your venue type. Straight answer on fit, including whether your cameras qualify.</div><div class="cta"><a href="mailto:hello@yyzdata.com">hello@yyzdata.com</a></div></div></section>
   </div>
-
-  <div class="kicker seckick">For partners</div>
-  <div class="pickgrid">
-    <a class="pick" href="Partner_Build_Deck.html"><div class="card"><div class="label">BUILD PARTNER</div><div class="title">Build it with us</div><div class="body">Design partnership: the trade, the terms, the data deal.</div></div></a>
-    <a class="pick" href="Partner_Distribution_Deck.html"><div class="card"><div class="label">DISTRIBUTION PARTNER</div><div class="title">Your relationships, our platform</div><div class="body">Integrators, resellers, networks. Recurring economics.</div></div></a>
-  </div>
-
-  <div class="kicker seckick">Company</div>
-  <div class="pickgrid">
-    <a class="pick" href="YYZdata_Overview_Deck.html"><div class="card"><div class="label">YYZDATA &middot; OVERVIEW</div><div class="title">The company in seven slides</div><div class="body">What we are, who it is for, how to work with us.</div></div></a>
-  </div>
-
-  <div class="status-note" style="margin-top:30px;">Live Signals walkthrough: <a href="https://yyzdata.com/signals" style="color:#4C8DFF;">yyzdata.com/signals</a></div>
+  <div class="navzone left" onclick="go(-1)"></div>
+  <div class="navzone right" onclick="go(1)"></div>
+</div>
+<div class="navdots" id="dots"></div>
+<div class="navbtns">
+  <button onclick="go(-1)">&#8592; Back</button>
+  <button class="primary" onclick="go(1)">Next &#8594;</button>
 </div>
 
 <div id="gate" style="position:fixed;inset:0;background:#0A0E17;z-index:100;display:flex;
@@ -200,7 +184,7 @@
 </div>
 <script>
 (function(){
-  var H_MASTER='41f3c77be62c2fd293c2a8ad7138392f176656acfb6ea758f5a1586dc4972b2f', H_DECK='665ab4e4f0a5023ec22a11d95c0b018923e32cf477ab6e3657725c1efd52029e', SCOPE='index';
+  var H_MASTER='41f3c77be62c2fd293c2a8ad7138392f176656acfb6ea758f5a1586dc4972b2f', H_DECK='665ab4e4f0a5023ec22a11d95c0b018923e32cf477ab6e3657725c1efd52029e', SCOPE='deck';
   var gate=document.getElementById('gate'), inp=document.getElementById('gateInput'), err=document.getElementById('gateErr');
   function open_(){ gate.style.display='none'; }
   try{
@@ -220,6 +204,43 @@
   inp.addEventListener('keydown',function(e){ if(e.key==='Enter') tryUnlock(); });
   setTimeout(function(){ inp.focus(); },100);
 })();
+</script>
+<script>
+  const total = 6;
+  let idx = 0;
+  const track = document.getElementById('track');
+  const dotsWrap = document.getElementById('dots');
+  const cnum = document.getElementById('cnum');
+  const progress = document.getElementById('progress');
+  for(let i=0;i<total;i++){
+    const d = document.createElement('div');
+    d.className = 'dot' + (i===0?' on':'');
+    d.onclick = ()=>render(i);
+    dotsWrap.appendChild(d);
+  }
+  const slides = document.querySelectorAll('.slide');
+  function render(n){
+    idx = Math.max(0, Math.min(total-1, n));
+    track.style.transform = `translateX(-${idx*100}vw)`;
+    slides.forEach((s,i)=>s.classList.toggle('active', i===idx));
+    document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on', i===idx));
+    cnum.textContent = idx+1;
+    progress.style.width = ((idx+1)/total*100)+'%';
+  }
+  function go(dir){ render(idx+dir); }
+  document.addEventListener('keydown', e=>{
+    if(['ArrowRight','PageDown',' '].includes(e.key)) go(1);
+    if(['ArrowLeft','PageUp'].includes(e.key)) go(-1);
+  });
+  let touchX=null;
+  document.addEventListener('touchstart', e=>touchX=e.touches[0].clientX);
+  document.addEventListener('touchend', e=>{
+    if(touchX===null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    if(Math.abs(dx)>50) go(dx<0?1:-1);
+    touchX=null;
+  });
+  render(0);
 </script>
 </body>
 </html>

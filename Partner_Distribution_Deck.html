@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YYZdata &middot; Deck Library</title>
+<title>YYZdata &middot; PARTNERS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Orbitron:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -142,50 +142,35 @@
   .src-note{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#4A5164;
     letter-spacing:.04em;margin-top:16px;}
   @media (max-width:760px){.navbtns{right:6vw;bottom:56px;}.navdots{display:none;}}
-
-  html,body{overflow:auto;}
-  .pickwrap{min-height:100vh;display:flex;flex-direction:column;padding:70px 9vw 90px;}
-  .seckick{margin-top:40px;}
-  .pickgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px;max-width:1120px;}
-  a.pick{text-decoration:none;display:block;}
-  a.pick .card{transition:border-color .2s, transform .2s;height:100%;}
-  a.pick:hover .card{border-color:rgba(76,141,255,.5);transform:translateY(-2px);}
-  @media (max-width:900px){.pickgrid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
-<div class="pickwrap">
-  <img src="logo-red.png" alt="YYZDATA" style="height:44px;width:auto;align-self:flex-start;">
-  <div class="kicker" style="margin-top:20px;">Deck library</div>
-  <h1 class="headline" style="font-size:clamp(28px,4vw,48px);margin-top:8px;">Pick by audience. Send the link.</h1>
-  <div class="sub">Every deck link works on its own with the deck code. Arrow keys or the Next button move slides.</div>
-
-  <div class="kicker seckick">For investors</div>
-  <div class="pickgrid">
-    <a class="pick" href="YYZdata_Investor_Deck.html"><div class="card live-card"><div class="label live">YYZDATA &middot; INVESTOR</div><div class="title">The seed deck</div><div class="body">Two engines, market, moat, use of funds, the $1M ask.</div></div></a>
+<div class="headerbar">
+  <div class="brand">
+    <img src="logo-red.png" alt="YYZDATA" class="logo"/>
+    <span class="sep">/</span>
+    <span class="ctx">PARTNERS</span>
   </div>
-
-  <div class="kicker seckick">For customers &middot; by venue</div>
-  <div class="pickgrid">
-    <a class="pick" href="Vertical_Lounge_Deck.html"><div class="card"><div class="label">LOUNGE &middot; RESTAURANT</div><div class="title">Staff the crowd you have</div><div class="body">Labor, walkouts, traffic vs sales.</div></div></a>
-    <a class="pick" href="Vertical_Cannabis_Deck.html"><div class="card"><div class="label">REGULATED RETAIL</div><div class="title">Cameras that run the store</div><div class="body">Rides the compliance estate, read-only.</div></div></a>
-    <a class="pick" href="Vertical_Stadium_Deck.html"><div class="card"><div class="label">BALLPARK &middot; STADIUM</div><div class="title">The line is the leak</div><div class="body">Queue and flow intelligence, zero identity risk.</div></div></a>
-    <a class="pick" href="Signals_Prospect_Deck.html"><div class="card"><div class="label">SIGNALS &middot; GENERAL</div><div class="title">The walkthrough</div><div class="body">Any venue: what it answers, how it lands.</div></div></a>
-    <a class="pick" href="Forge_Prospect_Deck.html"><div class="card"><div class="label">FORGE &middot; SERVICES</div><div class="title">The service catalog</div><div class="body">Offers, pricing, engagement model, proof.</div></div></a>
+  <div class="counter"><span id="cnum">1</span> / 7</div>
+</div>
+<div class="progress" id="progress" style="width:0%"></div>
+<div class="deck">
+  <div class="track" id="track">
+<section class="slide titleslide"><div class="slide-inner"><div class="wordmark"><span class="logotext">YYZDATA &middot; DISTRIBUTION PARTNER</span></div><h1>Your relationships. Our platform.</h1><div class="sub">For integrators, POS and hospitality-tech resellers, consultants and operator networks: recurring revenue on the accounts you already serve, without displacing anything you sell today.</div><div class="meta-row"><div class="m">Partner program</div><div class="m">hello@yyzdata.com</div></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Why it fits</div><div class="rule"></div><h2 class="headline">It adds to your book. It does not compete with it.</h2><div class="grid cols3"><div class="card"><div class="label">Integrators</div><div class="title">You installed the cameras</div><div class="body">Signals rides the systems you already deployed, read-only, and gives your customer a reason to thank you twice.</div></div><div class="card"><div class="label">POS &amp; tech resellers</div><div class="title">You own the counter</div><div class="body">Traffic next to transactions is the report your customers keep asking for. Signals is the missing half.</div></div><div class="card"><div class="label">Consultants &amp; networks</div><div class="title">You own the trust</div><div class="body">A concrete, working thing to bring your operators that costs them a subscription, not a project.</div></div></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">What Signals is</div><div class="rule"></div><h2 class="headline">In one slide.</h2><div class="sub">An on-site intelligence layer over a venue's existing cameras: live occupancy, staffing against actual traffic, queue awareness, traffic next to sales, alerts to a phone. Aggregate counts by default: no faces, no identity, no video stored. Live in days on cameras the venue already owns, or a managed kit on loan.</div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">The economics</div><div class="rule"></div><h2 class="headline">Recurring, structured per partner, in writing.</h2><div class="grid cols3"><div class="card"><div class="label">Referral</div><div class="title">You introduce, we deliver</div><div class="body">A recurring share on subscription revenue for accounts you bring, for as long as they stay.</div></div><div class="card"><div class="label">Reseller</div><div class="title">You sell and install</div><div class="body">Margin on the subscription plus the installation revenue. We supply the platform, kit and training; you keep the customer relationship.</div></div><div class="card"><div class="label">Either way</div><div class="title">No channel conflict</div><div class="body">Your accounts are registered and protected. We do not sell around you.</div></div></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">What we provide</div><div class="rule"></div><h2 class="headline">Everything needed to sell it well.</h2><div class="grid cols3"><div class="card"><div class="label">Demo</div><div class="title">A live instance</div><div class="body">A gated demo environment and deck set for your conversations.</div></div><div class="card"><div class="label">Enablement</div><div class="title">Training and collateral</div><div class="body">Product training, one-pagers, vertical decks, and a straight technical answer within a day.</div></div><div class="card"><div class="label">Delivery</div><div class="title">Backstop included</div><div class="body">Our team handles or supports installs, integration and tuning until yours is comfortable.</div></div></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Who we want</div><div class="rule"></div><h2 class="headline">A short list, on purpose.</h2><div class="sub">A small number of partners per region and vertical, chosen for relationships and delivery quality, not volume. Early partners shape the program and keep the best terms.</div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Next step</div><div class="rule"></div><h2 class="headline">One conversation.</h2><div class="sub">Tell us about your book, we show the working system, and we put a structure on paper that fits how you sell.</div><div class="cta"><a href="mailto:hello@yyzdata.com">hello@yyzdata.com</a></div></div></section>
   </div>
-
-  <div class="kicker seckick">For partners</div>
-  <div class="pickgrid">
-    <a class="pick" href="Partner_Build_Deck.html"><div class="card"><div class="label">BUILD PARTNER</div><div class="title">Build it with us</div><div class="body">Design partnership: the trade, the terms, the data deal.</div></div></a>
-    <a class="pick" href="Partner_Distribution_Deck.html"><div class="card"><div class="label">DISTRIBUTION PARTNER</div><div class="title">Your relationships, our platform</div><div class="body">Integrators, resellers, networks. Recurring economics.</div></div></a>
-  </div>
-
-  <div class="kicker seckick">Company</div>
-  <div class="pickgrid">
-    <a class="pick" href="YYZdata_Overview_Deck.html"><div class="card"><div class="label">YYZDATA &middot; OVERVIEW</div><div class="title">The company in seven slides</div><div class="body">What we are, who it is for, how to work with us.</div></div></a>
-  </div>
-
-  <div class="status-note" style="margin-top:30px;">Live Signals walkthrough: <a href="https://yyzdata.com/signals" style="color:#4C8DFF;">yyzdata.com/signals</a></div>
+  <div class="navzone left" onclick="go(-1)"></div>
+  <div class="navzone right" onclick="go(1)"></div>
+</div>
+<div class="navdots" id="dots"></div>
+<div class="navbtns">
+  <button onclick="go(-1)">&#8592; Back</button>
+  <button class="primary" onclick="go(1)">Next &#8594;</button>
 </div>
 
 <div id="gate" style="position:fixed;inset:0;background:#0A0E17;z-index:100;display:flex;
@@ -200,7 +185,7 @@
 </div>
 <script>
 (function(){
-  var H_MASTER='41f3c77be62c2fd293c2a8ad7138392f176656acfb6ea758f5a1586dc4972b2f', H_DECK='665ab4e4f0a5023ec22a11d95c0b018923e32cf477ab6e3657725c1efd52029e', SCOPE='index';
+  var H_MASTER='41f3c77be62c2fd293c2a8ad7138392f176656acfb6ea758f5a1586dc4972b2f', H_DECK='665ab4e4f0a5023ec22a11d95c0b018923e32cf477ab6e3657725c1efd52029e', SCOPE='deck';
   var gate=document.getElementById('gate'), inp=document.getElementById('gateInput'), err=document.getElementById('gateErr');
   function open_(){ gate.style.display='none'; }
   try{
@@ -220,6 +205,43 @@
   inp.addEventListener('keydown',function(e){ if(e.key==='Enter') tryUnlock(); });
   setTimeout(function(){ inp.focus(); },100);
 })();
+</script>
+<script>
+  const total = 7;
+  let idx = 0;
+  const track = document.getElementById('track');
+  const dotsWrap = document.getElementById('dots');
+  const cnum = document.getElementById('cnum');
+  const progress = document.getElementById('progress');
+  for(let i=0;i<total;i++){
+    const d = document.createElement('div');
+    d.className = 'dot' + (i===0?' on':'');
+    d.onclick = ()=>render(i);
+    dotsWrap.appendChild(d);
+  }
+  const slides = document.querySelectorAll('.slide');
+  function render(n){
+    idx = Math.max(0, Math.min(total-1, n));
+    track.style.transform = `translateX(-${idx*100}vw)`;
+    slides.forEach((s,i)=>s.classList.toggle('active', i===idx));
+    document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on', i===idx));
+    cnum.textContent = idx+1;
+    progress.style.width = ((idx+1)/total*100)+'%';
+  }
+  function go(dir){ render(idx+dir); }
+  document.addEventListener('keydown', e=>{
+    if(['ArrowRight','PageDown',' '].includes(e.key)) go(1);
+    if(['ArrowLeft','PageUp'].includes(e.key)) go(-1);
+  });
+  let touchX=null;
+  document.addEventListener('touchstart', e=>touchX=e.touches[0].clientX);
+  document.addEventListener('touchend', e=>{
+    if(touchX===null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    if(Math.abs(dx)>50) go(dx<0?1:-1);
+    touchX=null;
+  });
+  render(0);
 </script>
 </body>
 </html>

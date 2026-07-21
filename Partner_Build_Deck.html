@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YYZdata &middot; Deck Library</title>
+<title>YYZdata &middot; BUILD PARTNER</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Orbitron:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -142,50 +142,35 @@
   .src-note{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#4A5164;
     letter-spacing:.04em;margin-top:16px;}
   @media (max-width:760px){.navbtns{right:6vw;bottom:56px;}.navdots{display:none;}}
-
-  html,body{overflow:auto;}
-  .pickwrap{min-height:100vh;display:flex;flex-direction:column;padding:70px 9vw 90px;}
-  .seckick{margin-top:40px;}
-  .pickgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px;max-width:1120px;}
-  a.pick{text-decoration:none;display:block;}
-  a.pick .card{transition:border-color .2s, transform .2s;height:100%;}
-  a.pick:hover .card{border-color:rgba(76,141,255,.5);transform:translateY(-2px);}
-  @media (max-width:900px){.pickgrid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
-<div class="pickwrap">
-  <img src="logo-red.png" alt="YYZDATA" style="height:44px;width:auto;align-self:flex-start;">
-  <div class="kicker" style="margin-top:20px;">Deck library</div>
-  <h1 class="headline" style="font-size:clamp(28px,4vw,48px);margin-top:8px;">Pick by audience. Send the link.</h1>
-  <div class="sub">Every deck link works on its own with the deck code. Arrow keys or the Next button move slides.</div>
-
-  <div class="kicker seckick">For investors</div>
-  <div class="pickgrid">
-    <a class="pick" href="YYZdata_Investor_Deck.html"><div class="card live-card"><div class="label live">YYZDATA &middot; INVESTOR</div><div class="title">The seed deck</div><div class="body">Two engines, market, moat, use of funds, the $1M ask.</div></div></a>
+<div class="headerbar">
+  <div class="brand">
+    <img src="logo-red.png" alt="YYZDATA" class="logo"/>
+    <span class="sep">/</span>
+    <span class="ctx">BUILD PARTNER</span>
   </div>
-
-  <div class="kicker seckick">For customers &middot; by venue</div>
-  <div class="pickgrid">
-    <a class="pick" href="Vertical_Lounge_Deck.html"><div class="card"><div class="label">LOUNGE &middot; RESTAURANT</div><div class="title">Staff the crowd you have</div><div class="body">Labor, walkouts, traffic vs sales.</div></div></a>
-    <a class="pick" href="Vertical_Cannabis_Deck.html"><div class="card"><div class="label">REGULATED RETAIL</div><div class="title">Cameras that run the store</div><div class="body">Rides the compliance estate, read-only.</div></div></a>
-    <a class="pick" href="Vertical_Stadium_Deck.html"><div class="card"><div class="label">BALLPARK &middot; STADIUM</div><div class="title">The line is the leak</div><div class="body">Queue and flow intelligence, zero identity risk.</div></div></a>
-    <a class="pick" href="Signals_Prospect_Deck.html"><div class="card"><div class="label">SIGNALS &middot; GENERAL</div><div class="title">The walkthrough</div><div class="body">Any venue: what it answers, how it lands.</div></div></a>
-    <a class="pick" href="Forge_Prospect_Deck.html"><div class="card"><div class="label">FORGE &middot; SERVICES</div><div class="title">The service catalog</div><div class="body">Offers, pricing, engagement model, proof.</div></div></a>
+  <div class="counter"><span id="cnum">1</span> / 7</div>
+</div>
+<div class="progress" id="progress" style="width:0%"></div>
+<div class="deck">
+  <div class="track" id="track">
+<section class="slide titleslide"><div class="slide-inner"><div class="wordmark"><span class="logotext">YYZDATA &middot; BUILD PARTNER</span></div><h1>Build it with us.</h1><div class="sub">A design partnership: your venue, our platform, shaped together. You get the product early and priced like a partner. We get the thing money cannot buy: a real operation to build against.</div><div class="meta-row"><div class="m">Design partnership</div><div class="m">hello@yyzdata.com</div></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">The trade</div><div class="rule"></div><h2 class="headline">What each side brings.</h2><div class="grid cols2"><div class="card"><div class="label">You bring</div><div class="title">A real operation</div><div class="body">A venue with real customers, real staff and real problems, and an operator's honest read on what matters and what is noise.</div></div><div class="card"><div class="label">We bring</div><div class="title">A working system and a team that ships</div><div class="body">The live Signals platform, the hardware, the installation, and changes turned around in days, not quarters.</div></div></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">What we deploy</div><div class="rule"></div><h2 class="headline">Your venue, instrumented.</h2><div class="sub">Cameras you already have, or a kit we bring on loan. A live dashboard for your roles: owner, floor, security. Alerts to the right phone, tuned to your thresholds, your hours, your rules.</div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">What you get</div><div class="rule"></div><h2 class="headline">Partner terms, not customer terms.</h2><div class="grid cols2"><div class="card"><div class="label">Price</div><div class="title">Partner pricing for the partnership</div><div class="body">The build-partner period is priced as a partnership, not a subscription. Terms agreed up front, in writing.</div></div><div class="card"><div class="label">Influence</div><div class="title">The product bends toward you</div><div class="body">Your requests move to the front of the build queue. Features get shaped around your operation first.</div></div><div class="card"><div class="label">First look</div><div class="title">Everything early</div><div class="body">New capabilities land at your venue before they land anywhere else.</div></div><div class="card"><div class="label">The story</div><div class="title">Told with your approval</div><div class="body">When it works, the before-and-after becomes a case study, only with your sign-off, framed how you want it.</div></div></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">What we ask</div><div class="rule"></div><h2 class="headline">Three things, all on paper.</h2><div class="grid cols3"><div class="card"><div class="label">Access</div><div class="title">The venue and the feedback</div><div class="body">Room to install and tune, and your honest reaction, especially when something misses.</div></div><div class="card"><div class="label">Data</div><div class="title">An explicit, licensed agreement</div><div class="body">Aggregates by default. If we use footage samples to train models, it is a separate written license: time-boxed, revocable, transparent.</div></div><div class="card"><div class="label">Reference</div><div class="title">When it earns it</div><div class="body">A conversation with the next operator or investor, once the numbers are real.</div></div></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">How it runs</div><div class="rule"></div><h2 class="headline">Two weeks to live, then we iterate.</h2><div class="sub">Install and tune in the first days. A baseline week so the numbers mean something. Then weekly working check-ins: what the system caught, what it missed, what gets built next. Either side can end the partnership; everything installed keeps working.</div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Next step</div><div class="rule"></div><h2 class="headline">Pick the start week.</h2><div class="sub">One conversation to agree terms, one visit to install, and your venue starts talking.</div><div class="cta"><a href="mailto:hello@yyzdata.com">hello@yyzdata.com</a></div></div></section>
   </div>
-
-  <div class="kicker seckick">For partners</div>
-  <div class="pickgrid">
-    <a class="pick" href="Partner_Build_Deck.html"><div class="card"><div class="label">BUILD PARTNER</div><div class="title">Build it with us</div><div class="body">Design partnership: the trade, the terms, the data deal.</div></div></a>
-    <a class="pick" href="Partner_Distribution_Deck.html"><div class="card"><div class="label">DISTRIBUTION PARTNER</div><div class="title">Your relationships, our platform</div><div class="body">Integrators, resellers, networks. Recurring economics.</div></div></a>
-  </div>
-
-  <div class="kicker seckick">Company</div>
-  <div class="pickgrid">
-    <a class="pick" href="YYZdata_Overview_Deck.html"><div class="card"><div class="label">YYZDATA &middot; OVERVIEW</div><div class="title">The company in seven slides</div><div class="body">What we are, who it is for, how to work with us.</div></div></a>
-  </div>
-
-  <div class="status-note" style="margin-top:30px;">Live Signals walkthrough: <a href="https://yyzdata.com/signals" style="color:#4C8DFF;">yyzdata.com/signals</a></div>
+  <div class="navzone left" onclick="go(-1)"></div>
+  <div class="navzone right" onclick="go(1)"></div>
+</div>
+<div class="navdots" id="dots"></div>
+<div class="navbtns">
+  <button onclick="go(-1)">&#8592; Back</button>
+  <button class="primary" onclick="go(1)">Next &#8594;</button>
 </div>
 
 <div id="gate" style="position:fixed;inset:0;background:#0A0E17;z-index:100;display:flex;
@@ -200,7 +185,7 @@
 </div>
 <script>
 (function(){
-  var H_MASTER='41f3c77be62c2fd293c2a8ad7138392f176656acfb6ea758f5a1586dc4972b2f', H_DECK='665ab4e4f0a5023ec22a11d95c0b018923e32cf477ab6e3657725c1efd52029e', SCOPE='index';
+  var H_MASTER='41f3c77be62c2fd293c2a8ad7138392f176656acfb6ea758f5a1586dc4972b2f', H_DECK='665ab4e4f0a5023ec22a11d95c0b018923e32cf477ab6e3657725c1efd52029e', SCOPE='deck';
   var gate=document.getElementById('gate'), inp=document.getElementById('gateInput'), err=document.getElementById('gateErr');
   function open_(){ gate.style.display='none'; }
   try{
@@ -220,6 +205,43 @@
   inp.addEventListener('keydown',function(e){ if(e.key==='Enter') tryUnlock(); });
   setTimeout(function(){ inp.focus(); },100);
 })();
+</script>
+<script>
+  const total = 7;
+  let idx = 0;
+  const track = document.getElementById('track');
+  const dotsWrap = document.getElementById('dots');
+  const cnum = document.getElementById('cnum');
+  const progress = document.getElementById('progress');
+  for(let i=0;i<total;i++){
+    const d = document.createElement('div');
+    d.className = 'dot' + (i===0?' on':'');
+    d.onclick = ()=>render(i);
+    dotsWrap.appendChild(d);
+  }
+  const slides = document.querySelectorAll('.slide');
+  function render(n){
+    idx = Math.max(0, Math.min(total-1, n));
+    track.style.transform = `translateX(-${idx*100}vw)`;
+    slides.forEach((s,i)=>s.classList.toggle('active', i===idx));
+    document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on', i===idx));
+    cnum.textContent = idx+1;
+    progress.style.width = ((idx+1)/total*100)+'%';
+  }
+  function go(dir){ render(idx+dir); }
+  document.addEventListener('keydown', e=>{
+    if(['ArrowRight','PageDown',' '].includes(e.key)) go(1);
+    if(['ArrowLeft','PageUp'].includes(e.key)) go(-1);
+  });
+  let touchX=null;
+  document.addEventListener('touchstart', e=>touchX=e.touches[0].clientX);
+  document.addEventListener('touchend', e=>{
+    if(touchX===null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    if(Math.abs(dx)>50) go(dx<0?1:-1);
+    touchX=null;
+  });
+  render(0);
 </script>
 </body>
 </html>
