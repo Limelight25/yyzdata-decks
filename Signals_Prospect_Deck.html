@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Signals · Overview</title>
+<title>YYZdata &middot; SIGNALS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Orbitron:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -128,12 +128,24 @@
     .footer-brand{left:6vw;bottom:12px;font-size:10px;}
     .cta{margin-top:22px;}
   }
+
+  .navdots{left:50%;right:auto;transform:translateX(-50%);}
+  .navbtns{position:fixed;bottom:22px;right:9vw;display:flex;gap:10px;z-index:25;}
+  .navbtns button{font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:.04em;
+    cursor:pointer;border-radius:8px;padding:10px 18px;border:1px solid rgba(255,255,255,.14);
+    background:rgba(255,255,255,.04);color:#C7CCD9;transition:background .2s;}
+  .navbtns button:hover{background:rgba(255,255,255,.09);}
+  .navbtns button.primary{background:var(--blue);color:#06111f;border-color:var(--blue);font-weight:600;}
+  .navbtns button.primary:hover{background:#69a0ff;}
+  .status-note{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#6C7488;
+    letter-spacing:.05em;text-transform:uppercase;margin-top:18px;}
+  @media (max-width:760px){.navbtns{right:6vw;bottom:56px;}.navdots{display:none;}}
 </style>
 </head>
 <body>
 <div class="headerbar">
   <div class="brand">
-    <img src="yyzdata-logo.png" alt="YYZDATA" class="logo"/>
+    <img src="logo-red.png" alt="YYZDATA" class="logo"/>
     <span class="sep">/</span>
     <span class="ctx">SIGNALS</span>
   </div>
@@ -142,85 +154,58 @@
 <div class="progress" id="progress" style="width:0%"></div>
 <div class="deck">
   <div class="track" id="track">
-<section class="slide titleslide"><div class="slide-inner">
-          <div class="wordmark"><span class="logotext">SIGNALS BY YYZDATA</span></div>
-          <h1>Your cameras already see everything. Now they can tell you what's happening.</h1>
-          <div class="sub">Signals turns the video you already have into operational intelligence, no new cameras, no rip-and-replace.</div>
-          <div class="meta-row"><div class="m">Live demo available</div><div class="m">yyzdata.com</div></div>
-        </div></section>
-<section class="slide"><div class="slide-inner">
-          <div class="kicker">THE GAP</div>
-          <h2 class="headline">Cameras record. They don't tell you anything.</h2>
-          <div class="sub">Queues build up. Security incidents unfold. Guests have a bad or a great experience. All of it happens on camera, and almost none of it reaches the people who could act on it in time.</div>
-
-        </div></section>
-<section class="slide"><div class="slide-inner">
-          <div class="kicker">WHAT SIGNALS SURFACES</div>
-          <h2 class="headline">Three things venues ask for most.</h2>
-          <div class="sub"></div>
-          <div class="grid cols3"><div class="card "><div class="label ">OPERATIONS</div><div class="title">Queue length & wait times</div><div class="body">Know where a line is forming before a guest complains about it.</div></div><div class="card "><div class="label ">SAFETY</div><div class="title">Security awareness</div><div class="body">Ambient awareness and incident context, layered on cameras you already run.</div></div><div class="card "><div class="label ">EXPERIENCE</div><div class="title">Fan & guest experience</div><div class="body">Turn crowd and dwell patterns into a better visit, in real time.</div></div></div>
-        </div></section>
-<section class="slide"><div class="slide-inner">
-          <div class="kicker">HOW IT WORKS</div>
-          <h2 class="headline">Overlay, not replace.</h2>
-          <div class="sub">Signals runs alongside your existing camera and network infrastructure. Nothing to rip out, nothing new to mount. It watches, reasons, and answers plain-language questions about what's happening on site right now.</div>
-
-        </div></section>
-<section class="slide"><div class="slide-inner">
-          <div class="kicker">ONE SYSTEM, THREE VIEWS</div>
-          <h2 class="headline">Built for who's actually in the building.</h2>
-          <div class="sub"></div>
-          <div class="grid cols3"><div class="card "><div class="label ">OWNER / OPERATOR</div><div class="title">Run the venue</div><div class="body">Queue length, wait times, staffing gaps, and dwell patterns surfaced automatically.</div></div><div class="card "><div class="label ">STAFF & SECURITY</div><div class="title">See it before it's a problem</div><div class="body">Security awareness and incident context, without adding headcount.</div></div><div class="card "><div class="label ">GUEST</div><div class="title">A better visit</div><div class="body">Fan and guest experience signals feed directly back into how the venue runs.</div></div></div>
-        </div></section>
-<section class="slide"><div class="slide-inner">
-          <div class="kicker">SEE IT LIVE</div>
-          <h2 class="headline">Already running across seven venue types.</h2>
-          <div class="sub">Interactive demos are live today. Walk through the one closest to your business.</div>
-          <span class="tag live">Stadium</span><span class="tag live">Fenway Park</span><span class="tag live">Restaurant & Lounge</span><span class="tag live">Auto Dealership</span><span class="tag live">Commercial Real Estate</span><span class="tag live">Retail</span><span class="tag live">Campus</span>
-        </div></section>
-<section class="slide"><div class="slide-inner">
-          <div class="kicker">PRIVACY BY DESIGN</div>
-          <h2 class="headline">No biometrics. No raw video leaves the box.</h2>
-          <div class="sub">Signals counts, tracks flow, and reasons about zones, not identities. Only results and health status leave the device; the video never does. You own your data.</div>
-
-        </div></section>
-<section class="slide"><div class="slide-inner">
-          <div class="kicker">NEXT STEP</div>
-          <h2 class="headline">See it running on your kind of venue.</h2>
-          <div class="sub">Thirty minutes, live demo, no slides required.</div>
-          <div class="cta"><a href="mailto:info@yyzdata.com">Schedule a walkthrough</a></div>
-        </div><div class="footer-brand">YYZdata Inc. · Signals</div></section>
+<section class="slide titleslide"><div class="slide-inner"><div class="wordmark"><span class="logotext">SIGNALS BY YYZDATA</span></div><h1>Your cameras already see everything. Now they can tell you what’s happening.</h1><div class="sub">Signals turns the video you already have into operational intelligence. No new cameras, no rip-and-replace, nothing stored that shouldn’t be.</div><div class="meta-row"><div class="m">Live walkthrough available</div><div class="m">yyzdata.com</div></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">The gap</div><div class="rule"></div><h2 class="headline">Cameras record. They don’t tell you anything.</h2><div class="sub">Lines build. The floor gets slammed. A great night and a bad one look identical on the recorder. All of it happens on camera, and none of it reaches the person who could act in time.</div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">What Signals answers</div><div class="rule"></div><h2 class="headline">The questions you actually ask.</h2><div class="grid cols2"><div class="card"><div class="label">Right now</div><div class="title">How many people are here?</div><div class="body">Live occupancy by zone: door, floor, bar, patio.</div></div><div class="card"><div class="label">Staffing</div><div class="title">Are we staffed to the crowd?</div><div class="body">Alerts to a manager’s phone before traffic outruns the schedule, not after.</div></div><div class="card"><div class="label">Revenue</div><div class="title">Does traffic become sales?</div><div class="body">Door counts next to your POS numbers on one screen, night by night.</div></div><div class="card"><div class="label">Loss</div><div class="title">What happened after close?</div><div class="body">Aggregate zone events with timestamps. We point to the exact moment on your own recorder.</div></div></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">How it works</div><div class="rule"></div><h2 class="headline">Overlay, not replace.</h2><div class="sub">Signals reads the cameras you already run: read-only, low-bandwidth, alongside your existing recorder, which keeps doing its job untouched. Processing happens on site, on a small box we manage. Answers arrive as a live dashboard and alerts to the right phone.</div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Privacy</div><div class="rule"></div><h2 class="headline">By design, configured to your rules.</h2><div class="grid cols3"><div class="card"><div class="label">Default</div><div class="title">Aggregates only</div><div class="body">Counts and events. No faces, no identity, no video stored by us. Frames are processed in memory and dropped.</div></div><div class="card"><div class="label">Your call</div><div class="title">Opt-ins, not surprises</div><div class="body">What gets enabled beyond the default is driven by your needs and your regulatory environment, never by our defaults.</div></div><div class="card"><div class="label">Your data</div><div class="title">Yours, on paper</div><div class="body">We do not want your data and we do not quietly keep it. Any training use is explicit, licensed, and written down.</div></div></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Getting started</div><div class="rule"></div><h2 class="headline">Live in days, not quarters.</h2><div class="grid cols3"><div class="card"><div class="label">Option one</div><div class="title">Your cameras</div><div class="body">If they speak standard protocols, and most do, there is nothing to buy and no install. We tell you in one call.</div></div><div class="card"><div class="label">Option two</div><div class="title">Our kit</div><div class="body">A preconfigured camera kit on loan, shipped ready. Plug in power and cameras; we finish remotely.</div></div><div class="card"><div class="label">Either way</div><div class="title">A subscription</div><div class="body">Priced so an owner can say yes. No capital purchase, no long lock-in to start.</div></div></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">See it</div><div class="rule"></div><h2 class="headline">A working system, not a mock-up.</h2><div class="sub">The live prototype runs on real cameras with models trained on real venue footage. Interactive walkthroughs exist for venue types from lounges to stadium concourses; we’ll show you the one closest to your business.</div><div class="cta"><a href="https://yyzdata.com/signals">Explore Signals &#8594;</a></div></div></section>
+<section class="slide"><div class="slide-inner"><div class="kicker">Next step</div><div class="rule"></div><h2 class="headline">Thirty minutes, your questions, the live system.</h2><div class="sub">No slides on the call. We walk the working dashboard, look at your camera setup, and give you a straight answer on fit.</div><div class="cta"><a href="mailto:hello@yyzdata.com">hello@yyzdata.com</a></div></div></section>
   </div>
   <div class="navzone left" onclick="go(-1)"></div>
   <div class="navzone right" onclick="go(1)"></div>
 </div>
 <div class="navdots" id="dots"></div>
+<div class="navbtns">
+  <button onclick="go(-1)">&#8592; Back</button>
+  <button class="primary" onclick="go(1)">Next &#8594;</button>
+</div>
+
 <div id="gate" style="position:fixed;inset:0;background:#0A0E17;z-index:100;display:flex;
   align-items:center;justify-content:center;flex-direction:column;">
+  <img src="logo-red.png" alt="" style="height:44px;margin-bottom:18px;">
   <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#4C8DFF;letter-spacing:.14em;
-    text-transform:uppercase;margin-bottom:14px;">YYZDATA · ACCESS CODE</div>
+    text-transform:uppercase;margin-bottom:14px;">YYZDATA &middot; ACCESS CODE</div>
   <input id="gateInput" type="password" placeholder="enter code" autocomplete="off" style="
     font-family:'JetBrains Mono',monospace;font-size:15px;background:#121826;border:1px solid rgba(255,255,255,.12);
     color:#F4F6FA;padding:12px 16px;border-radius:8px;width:240px;text-align:center;outline:none;"/>
   <div id="gateErr" style="color:#E23744;font-family:'JetBrains Mono',monospace;font-size:11px;margin-top:10px;height:14px;"></div>
 </div>
 <script>
-  const GATE_CODE = "signals2026";
-  const gate = document.getElementById('gate');
-  const gateInput = document.getElementById('gateInput');
-  const gateErr = document.getElementById('gateErr');
-  if (localStorage.getItem('yyz_unlocked') === '1') { gate.style.display = 'none'; }
-  function tryUnlock(){
-    if (gateInput.value === GATE_CODE) {
-      localStorage.setItem('yyz_unlocked', '1');
-      gate.style.display = 'none';
-    } else {
-      gateErr.textContent = 'incorrect code';
-      gateInput.value = '';
-    }
+(function(){
+  var H_MASTER='41f3c77be62c2fd293c2a8ad7138392f176656acfb6ea758f5a1586dc4972b2f', H_DECK='665ab4e4f0a5023ec22a11d95c0b018923e32cf477ab6e3657725c1efd52029e', SCOPE='deck';
+  var gate=document.getElementById('gate'), inp=document.getElementById('gateInput'), err=document.getElementById('gateErr');
+  function open_(){ gate.style.display='none'; }
+  try{
+    if(localStorage.getItem('yyz_master')==='1') open_();
+    else if(SCOPE==='deck' && localStorage.getItem('yyz_deck')==='1') open_();
+  }catch(e){}
+  async function sha(s){
+    var b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));
+    return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,'0')}).join('');
   }
-  gateInput.addEventListener('keydown', e => { if (e.key === 'Enter') tryUnlock(); });
-  setTimeout(() => gateInput.focus(), 100);
+  async function tryUnlock(){
+    var h=await sha(inp.value||'');
+    if(h===H_MASTER){ try{localStorage.setItem('yyz_master','1')}catch(e){} open_(); }
+    else if(SCOPE==='deck' && h===H_DECK){ try{localStorage.setItem('yyz_deck','1')}catch(e){} open_(); }
+    else { err.textContent='incorrect code'; inp.value=''; }
+  }
+  inp.addEventListener('keydown',function(e){ if(e.key==='Enter') tryUnlock(); });
+  setTimeout(function(){ inp.focus(); },100);
+})();
+</script>
+<script>
   const total = 8;
   let idx = 0;
   const track = document.getElementById('track');
